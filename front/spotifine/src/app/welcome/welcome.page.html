@@ -1,12 +1,20 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>welcome</ion-title>
+    <ion-title class="sf_general_title">Spotifine</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-Bienvenue ! Pour commencer, veuillez authoriser l'accès à vos données de compte Spotify
-  <ion-button (click)="authorize()" >
-    <ion-icon name="key-outline"></ion-icon>
-  </ion-button>
-</ion-content>
+<ng-container class="">
+  <div class="sf_section_title">
+    Welcome !
+  </div>
+
+    <div style="text-align: center" class="sf_font">
+      First, please grant access to your account details
+    </div>
+  <div class="sf_container">
+    <ion-button (click)="authorize()" fill="clear" class="sf_button">
+      <ion-icon class="sf_icons" name="key-outline"></ion-icon>
+    </ion-button>
+  </div>
+</ng-container>

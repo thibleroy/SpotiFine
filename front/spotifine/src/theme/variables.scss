@@ -74,6 +74,12 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /**
+  Custom colors
+   */
+  --main-color: #E75050;
+  --second-color: #8D8D8D;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -230,3 +236,48 @@
     --color: white;
   }
 }
+
+/**
+Custom CSS variables
+ */
+
+.sf_font {
+  font-family: "Montserrat", sans-serif;
+  color: var(--second-color);
+}
+
+.sf_title {
+  @extend .sf_font;
+  text-align: center;
+  font-style: normal;
+}
+
+.sf_general_title {
+  @extend .sf_title;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+
+.sf_section_title {
+  @extend .sf_title;
+  font-weight: bold;
+}
+
+.sf_icons {
+  color: var(--main-color);
+}
+
+.sf_container {
+  height: 200px;
+  position: relative;
+}
+
+.sf_button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+

@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  spotify_api_url: 'https://api.spotify.com/v1'
+  spotify_api_url: 'https://api.spotify.com/v1',
+  spotify_api_client_id: '08dfe32c18c848149077bee62e4c0240',
+  spotify_api_client_secret: '5b271fda79314936ae0def61e60dc379'
 };
 
 /*
