@@ -1,0 +1,8 @@
+{
+  "appId": "spotifine.thibleroy",
+  "appName": "spotifine",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
