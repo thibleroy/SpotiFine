@@ -1,16 +1,30 @@
 {
   "name": "spotifine",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Thibault Leroy",
+  "homepage": "https://github.com/thibleroy",
   "scripts": {
     "serve": "node_modules/.bin/ng serve --host=localhost --port=8100",
-    "build:web": "node_modules/.bin/ng build",
-    "build:ios": "node_modules/.bin/cap",
-    "build:android": "",
+    "build": "node_modules/.bin/ng build",
+    "copy": "node_modules/.bin/cap copy",
+    "dist": "build",
+    "open:electron": "node_modules/.bin/cap open electron",
+    "open:android": "node_modules/.bin/cap open android",
+    "open:ios": "node_modules/.bin/cap open ios",
+    "build:": "npm run build && npm run copy",
+    "install:electron": "npm install ./electron",
+    "build:windows": "npm run --prefix ./electron build:windows",
     "test:runner": "node_modules/.bin/cypress run",
     "test:dashboard": "node_modules/.bin/cypress open",
     "clear": ""
+  },
+  "build": {
+    "appId": "thibleroy_spotifine",
+    "win": {
+      "target": "NSIS",
+      "icon": "src/assets/icon/icon.ico"
+    },
+    "extends": null
   },
   "private": true,
   "dependencies": {
@@ -50,5 +64,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Custom your personalized spotify playlists"
 }
