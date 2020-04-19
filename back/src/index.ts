@@ -1,8 +1,9 @@
 import {env} from '../../lib/env'
 import express from 'express';
-import {Router,Request, Response} from "express";
+import {Request, Response} from "express";
 import bodyparser from 'body-parser';
 import Morgan from 'morgan';
+import affect_routes from './routes';
 export const app = express();
 app.use(Morgan('dev'));
 app.use(function (req: Request, res: Response, next: any) {
@@ -14,13 +15,11 @@ app.use(function (req: Request, res: Response, next: any) {
 });
 app.use(bodyparser.json());
 
-const def = Router();
+app.use(function (err: Error, req: Request, res: Response, next: any) {
+    console.error(err);
+})
 
-def.get('/', (req: Request, res: Response) => {
-    res.json({hello: 'cc !'});
-});
-
-app.use('/auth',def)
+affect_routes(app);
 
 app.listen(env.SF_BACKEND_PORT, function () {
     console.log('App listening on port '+ env.SF_BACKEND_PORT);
