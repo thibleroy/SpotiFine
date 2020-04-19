@@ -1,0 +1,25 @@
+{
+  "name": "spotifine",
+  "version": "1.0.0",
+  "scripts": {
+    "copy:env": "node cp.js .env front/spotifine/src/.env",
+    "set:env:front": "npm run --prefix ./front/spotifine set:environment",
+    "init:front": "npm run copy:env && npm run set:env:front",
+    "refresh:env": "npm run clean:env && npm run copy:env",
+    "clean:env": "node rm.js front/spotifine/src/.env",
+    "clean:lib": "node rm.js lib/node_modules",
+    "clean:back": "node rm.js back/dist && node rm.js back/node_modules",
+    "clean:front": "node rm.js front/spotifine/www && node rm.js front/spotifine/node_modules",
+    "install:lib": "cd lib && npm install",
+    "install:back": "npm run install:lib && cd back && npm install",
+    "install:front": "npm run install:lib && cd front/spotifine && npm install",
+    "run:back:dev": "cd back && npm run start",
+    "run:front:dev": "cd front/spotifine && npm run serve"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

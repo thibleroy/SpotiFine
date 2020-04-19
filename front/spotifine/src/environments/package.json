@@ -1,0 +1,10 @@
+{
+  "name": "environments",
+  "version": "1.0.0",
+  "devDependencies": {
+    "typescript": "~3.4.3"
+  },
+  "scripts": {
+    "set:env": "node_modules/.bin/tsc && node dist/front/spotifine/src/environments/set-env.js"
+  }
+}
