@@ -11,10 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 import {SpotifyConnectorService} from "../services/spotify-connector.service";
 import {SessionService} from "../services/session.service";
+import {AccountComponent} from "./modal/account/account.component";
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, AccountComponent],
+  entryComponents: [AccountComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,

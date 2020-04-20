@@ -7,11 +7,7 @@ const routes: Routes = [
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
-  },  {
-    path: 'account',
-    loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
   },
-
 
 ];
 

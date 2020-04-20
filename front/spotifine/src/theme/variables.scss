@@ -251,17 +251,19 @@ Custom CSS variables
   text-align: left;
   font-style: normal;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sf_general_title {
   @extend .sf_title;
   font-weight: bolder;
   color: var(--main-color);
+  text-align: center;
 }
 
 .sf_section_title {
   @extend .sf_title;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .sf_icons {

@@ -14,8 +14,8 @@
     "install:lib": "cd lib && npm install",
     "install:back": "npm run install:lib && cd back && npm install",
     "install:front": "npm run install:lib && cd front/spotifine && npm install",
-    "run:back:dev": "cd back && npm run start",
-    "run:front:dev": "cd front/spotifine && npm run serve"
+    "run:back:dev": "npm run --prefix ./back start",
+    "run:front:dev": "npm run --prefix ./front/spotifine serve"
   },
   "devDependencies": {
     "shelljs": "^0.8.3"

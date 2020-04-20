@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Observable} from "rxjs";
+import {IAccount} from "../interfaces/account";
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +21,10 @@ export class SpotifyConnectorService {
     return this.http.get(`${this.api}/callback`, {headers: qP});
   }
 
-  getAccount(user_token: string): Observable<any>{
+  getAccount(user_token: string): Observable<IAccount>{
     const headers = {
       authorization: user_token
     }
-    return this.http.get(`${this.api}/account`, {headers: headers})
+    return this.http.get<IAccount>(`${this.api}/account`, {headers: headers})
   }
 }
