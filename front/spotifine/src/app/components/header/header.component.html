@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="end">
+        <div *ngIf="session.isAuth();else auth">
+            <ion-button  (click)="get_account()" class="sf_button" size="large">
+                <ion-icon name="cog-outline" class="sf_icons" slot="icon-only"></ion-icon>
+            </ion-button>
+        </div>
+        <ng-template #auth>
+                <ion-button (click)="spotify.authorize()" class="sf_button" size="large">
+                    <ion-icon name="key-outline" class="sf_icons" slot="icon-only"></ion-icon>
+                </ion-button>
+        </ng-template>
+        </ion-buttons>
+        <ion-text class="sf_general_title">
+            SPOTIFINE!
+        </ion-text>
+    </ion-toolbar>
+</ion-header>

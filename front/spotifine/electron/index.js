@@ -35,12 +35,13 @@ async function createWindow () {
     width: 1600,
     show: false,
     webPreferences: {
-      nodeIntegration: true,
-      preload: path.join(__dirname, 'node_modules', '@capacitor', 'electron', 'dist', 'electron-bridge.js')
+      nodeIntegration: false,
+      preload: path.join(__dirname, 'node_modules', '@capacitor', 'electron', 'dist', 'electron-bridge.js'),
+      webviewTag: 'BrowserView'
     }
   });
 
-  configCapacitor(mainWindow);
+  await configCapacitor(mainWindow);
 
   if (isDevMode) {
     // Set our above template to the Menu Object if we are in development mode, dont want users having the devtools.
@@ -53,7 +54,7 @@ async function createWindow () {
     splashScreen = new CapacitorSplashScreen(mainWindow);
     splashScreen.init();
   } else {
-    mainWindow.loadURL(`file://${__dirname}/app/index.html`);
+    await mainWindow.loadURL(`file://${__dirname}/app/index.html`);
     mainWindow.webContents.on('dom-ready', () => {
       mainWindow.show();
     });
@@ -75,11 +76,11 @@ app.on('window-all-closed', function () {
   }
 });
 
-app.on('activate', function () {
+app.on('activate', async function () {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) {
-    createWindow();
+    await createWindow();
   }
 });
 

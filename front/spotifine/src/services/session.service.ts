@@ -12,9 +12,9 @@ export class SessionService {
     localStorage.setItem('sf_token', token);
   }
 
-  log_out(){
+  async log_out(){
     localStorage.removeItem('sf_token');
-    this.router.navigateByUrl('welcome');
+    await this.router.navigateByUrl('welcome');
   }
 
   isAuth(): boolean {

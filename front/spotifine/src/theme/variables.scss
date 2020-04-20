@@ -79,7 +79,8 @@
   Custom colors
    */
   --main-color: #E75050;
-  --second-color: #8D8D8D;
+  --second-color: #27d7a3;
+  --text-color: #0d0d0d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -241,29 +242,32 @@
 Custom CSS variables
  */
 
-.sf_font {
+.sf_text {
   font-family: "Montserrat", sans-serif;
-  color: var(--second-color);
+  color: var(--text-color)
 }
 
 .sf_title {
-  @extend .sf_font;
-  text-align: left;
+  font-family: 'Permanent Marker', cursive;
+  color: var(--main-color);
+  font-weight: bold;
   font-style: normal;
-  margin-top: 20px;
-  margin-bottom: 20px;
+}
+
+.sf_emoji {
+  font-family: "Symbola", sans-serif;
 }
 
 .sf_general_title {
   @extend .sf_title;
-  font-weight: bolder;
-  color: var(--main-color);
   text-align: center;
+  font-size: xx-large;
+  margin-left: 15px;
 }
 
 .sf_section_title {
   @extend .sf_title;
-  font-weight: bolder;
+  text-align: left;
 }
 
 .sf_icons {
@@ -276,11 +280,20 @@ Custom CSS variables
 }
 
 .sf_button {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  --color-hover: var(--main-color);
 }
 
+.sf_param {
+  @extend .sf_title;
+  color: var(--main-color);
+  text-align: left;
+}
+
+.sf_value {
+  @extend .sf_text;
+  text-align: left;
+}
+
+.sf_clean_item {
+  margin: 5px;
+}

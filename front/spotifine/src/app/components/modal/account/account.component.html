@@ -1,0 +1,19 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" class="sf_button" size="large">
+        <ion-icon name="log-out-outline" class="sf_icons" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="sf_general_title">
+      {{account.display_name}}
+    </ion-title>
+    <ion-avatar slot="start" class="sf_clean_item">
+      <ion-img src="{{account.images[0].url}}"></ion-img>
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="sf_font">
+        <sf-parameter *ngFor="let iterable of getIterable(account)" [param]="iterable"></sf-parameter>
+</ion-content>
