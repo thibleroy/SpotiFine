@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {SpotifyConnectorService} from '../../services/spotify-connector.service'
+import {SessionService} from "../../services/session.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-welcome',
@@ -7,13 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomePage implements OnInit {
 
-  constructor() { }
+  authURI: string;
 
-  ngOnInit() {
+  constructor(private spotifyConnectorService: SpotifyConnectorService, private session: SessionService, private router: Router) { }
+
+  async ngOnInit() {
+    if (this.session.isAuth()) {
+      const navigated = await this.router.navigate(['home'])
+      if (navigated) console.log('navigated :)');
+    } else {
+      this.spotifyConnectorService.getAuthorizeURL().subscribe((value => {
+        console.log('authURL value', value);
+        this.authURI = value;
+      }));
+    }
   }
-
-  authorize(){
-
+  authorize() {
+    window.location.assign(this.authURI);
   }
-
 }

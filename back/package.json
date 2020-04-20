@@ -2,15 +2,18 @@
   "name": "back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/back/src/app.js",
   "dependencies": {
+    "crypto": "^1.0.1",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
     "@types/morgan": "^1.9.0",
     "@types/node": "^13.13.0",
+    "@types/spotify-web-api-node": "^4.0.1",
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.3",
     "typescript": "^3.8.3",
@@ -18,8 +21,9 @@
   },
   "scripts": {
     "build": "node_modules/.bin/tsc",
-    "dev": "node_modules/.bin/concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/back/src/index.js\"",
-    "start": "node_modules/.bin/tsc && node dist/back/src/index.js"
+    "dev": "node_modules/.bin/concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/back/src/app.js\"",
+    "serve": "npm run build && npm run dev",
+    "start": "node_modules/.bin/tsc && node dist/back/src/app.js"
   },
   "keywords": [],
   "author": "",

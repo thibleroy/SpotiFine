@@ -19,8 +19,8 @@ const make_str_env = (env: any) => {
     for (const property in env) {
         (typeof env[property] === "string" ? res +=`${property}: '${env[property]}',\r`: res +=`${property}: ${env[property]}\r,`);
     }
-    console.log('result: ' + res)
-    return res.substring(0, res.length -2) + '}';
+    res += 'production: false';
+    return res + '}';
 }
 console.log('value', make_str_env(env));
 

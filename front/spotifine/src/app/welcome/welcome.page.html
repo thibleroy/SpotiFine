@@ -1,11 +1,11 @@
-<ion-header [translucent]="true">
+<ion-header *ngIf="session.isAuth()">
   <ion-toolbar>
     <ion-title class="sf_general_title">Spotifine</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ng-container class="">
-  <div class="sf_section_title">
+  <div class="sf_general_title">
     Welcome !
   </div>
 

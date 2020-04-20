@@ -248,8 +248,9 @@ Custom CSS variables
 
 .sf_title {
   @extend .sf_font;
-  text-align: center;
+  text-align: left;
   font-style: normal;
+  margin-top: 20px;
 }
 
 .sf_general_title {
@@ -268,7 +269,7 @@ Custom CSS variables
 }
 
 .sf_container {
-  height: 200px;
+  height: 50px;
   position: relative;
 }
 
