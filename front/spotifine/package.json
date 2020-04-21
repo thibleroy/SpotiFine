@@ -17,7 +17,7 @@
     "test:runner": "node_modules/.bin/cypress run",
     "test:dashboard": "node_modules/.bin/cypress open",
     "install:environment": "cd src/environments && npm install",
-    "clear:environment": "node ./../../rm.js ./src/environments/dist && node ./../../rm.js ./src/environments/node_modules",
+    "clear:environment": "node ../../scripts/rm.js ./src/environments/dist && node ./../../rm.js ./src/environments/node_modules",
     "set:environment": "npm run install:environment && npm run --prefix ./src/environments set:env"
   },
   "build": {

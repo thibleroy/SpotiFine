@@ -2,16 +2,16 @@
   "name": "spotifine_global",
   "version": "1.0.0",
   "scripts": {
-    "print:env": "npm install && echo 'USING FOLLOWING ENVIRONMENT :' && node cat.js .env",
-    "copy:env:front": "node cp.js .env front/spotifine/src/.env",
+    "print:env": "npm install && echo USING FOLLOWING ENVIRONMENT : && node scripts/cat.js .env",
+    "copy:env:front": "node scripts/cp.js .env front/spotifine/src/.env",
     "set:env:front": "npm run --prefix ./front/spotifine set:environment",
     "init:front": "npm run copy:env:front && npm run set:env:front",
     "refresh:env": "npm run clean:env && npm run copy:env",
-    "clean:all": "npm install && npm run clean:env && npm run clean:lib && npm run clean:back && npm run clean:front && node rm.js node_modules",
-    "clean:env": "node rm.js front/spotifine/src/.env && npm run --prefix ./front/spotifine clear:environment",
-    "clean:lib": "node rm.js lib/node_modules",
-    "clean:back": "node rm.js back/dist && node rm.js back/node_modules",
-    "clean:front": "node rm.js front/spotifine/www && node rm.js front/spotifine/node_modules",
+    "clean:all": "npm install && npm run clean:env && npm run clean:lib && npm run clean:back && npm run clean:front && node scripts/rm.js node_modules",
+    "clean:env": "node scripts/rm.js front/spotifine/src/.env && npm run --prefix ./front/spotifine clear:environment",
+    "clean:lib": "node scripts/rm.js lib/node_modules",
+    "clean:back": "node scripts/rm.js back/dist && node rm.js back/node_modules",
+    "clean:front": "node scripts/rm.js front/spotifine/www && node rm.js front/spotifine/node_modules",
     "install:lib": "cd lib && npm install",
     "install:back": "npm run install:lib && cd back && npm install",
     "install:front": "npm run install:lib && cd front/spotifine && npm install",
@@ -21,7 +21,8 @@
     "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front"
   },
   "devDependencies": {
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "public-ip": "^4.0.1"
   },
   "dependencies": {
     "dotenv": "^8.2.0"
