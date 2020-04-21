@@ -1,5 +1,5 @@
 {
-  "name": "back",
+  "name": "spotifine_back",
   "version": "1.0.0",
   "description": "",
   "main": "dist/back/src/app.js",

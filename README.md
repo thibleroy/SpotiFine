@@ -13,3 +13,11 @@ SPOTIFY_CLIENT_SECRET='MY_SPOTIFY_CLIENT_SECRET' # SPOTIFY FOR DEVELOPERS CSECRE
 SPOTIFY_API_URI='https://api.spotify.com/v1' #SPOTIFY API URI
 SPOTIFY_ACCOUNTS_URI=accounts.spotify.com
 ````
+
+## Useful commmands
+## Start backend server (dev mode)
+- `npm run back:dev`
+## Start frontend (dev mode)
+- `npm run front:dev`
+## Clean all builds and dependencies
+- `npm run clean:all`

@@ -1,12 +1,13 @@
 {
-  "name": "spotifine",
+  "name": "spotifine_global",
   "version": "1.0.0",
   "scripts": {
-    "copy:env": "node cp.js .env front/spotifine/src/.env",
+    "print:env": "npm install && echo 'USING FOLLOWING ENVIRONMENT :' && node cat.js .env",
+    "copy:env:front": "node cp.js .env front/spotifine/src/.env",
     "set:env:front": "npm run --prefix ./front/spotifine set:environment",
-    "init:front": "npm run copy:env && npm run set:env:front",
+    "init:front": "npm run copy:env:front && npm run set:env:front",
     "refresh:env": "npm run clean:env && npm run copy:env",
-    "clean:all": "npm run clean:env && npm run clean:lib && npm run clean:back && npm run clean:front && node rm.js node_modules",
+    "clean:all": "npm install && npm run clean:env && npm run clean:lib && npm run clean:back && npm run clean:front && node rm.js node_modules",
     "clean:env": "node rm.js front/spotifine/src/.env && npm run --prefix ./front/spotifine clear:environment",
     "clean:lib": "node rm.js lib/node_modules",
     "clean:back": "node rm.js back/dist && node rm.js back/node_modules",
@@ -14,8 +15,10 @@
     "install:lib": "cd lib && npm install",
     "install:back": "npm run install:lib && cd back && npm install",
     "install:front": "npm run install:lib && cd front/spotifine && npm install",
-    "run:back:dev": "npm run --prefix ./back start",
-    "run:front:dev": "npm run --prefix ./front/spotifine serve"
+    "run:back": "npm run --prefix ./back dev",
+    "run:front": "npm run --prefix ./front/spotifine serve",
+    "back:dev": "npm run print:env && npm run install:back && npm run run:back",
+    "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front"
   },
   "devDependencies": {
     "shelljs": "^0.8.3"
