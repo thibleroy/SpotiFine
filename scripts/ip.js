@@ -1,5 +1,5 @@
 const publicIp = require('public-ip');
 
 (async () => {
-    console.log(await publicIp.v4());
+    process.stdout.write(await publicIp.v4());
 })();
