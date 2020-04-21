@@ -5,4 +5,4 @@
 - typescript
 - express
 - cypress
-- ![spotify-web-api-node](https://github.com/thelinmichael/spotify-web-api-node) library
+- [spotify-web-api-node](https://github.com/thelinmichael/spotify-web-api-node) library
