@@ -3,8 +3,8 @@
         <h1 class="sf_param">{{param.name}}</h1>
         <p class="sf_value">{{getStr(param.value)}}</p>
     </ion-label>
-    <ion-buttons slot="end">
-        <ion-button (click)="modify()" disabled="{{!param.editable}}" fill="clear" class="sf_button">
+    <ion-buttons *ngIf="param.editable" slot="end">
+        <ion-button (click)="modify()" fill="clear" class="sf_button">
             <ion-icon class="sf_icons" name="pencil-outline"></ion-icon>
         </ion-button>
     </ion-buttons>

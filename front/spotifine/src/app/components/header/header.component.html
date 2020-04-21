@@ -3,12 +3,12 @@
         <ion-buttons slot="end">
         <div *ngIf="session.isAuth();else auth">
             <ion-button  (click)="get_account()" class="sf_button" size="large">
-                <ion-icon name="cog-outline" class="sf_icons" slot="icon-only"></ion-icon>
+                <ion-icon name="cog-outline" class="sf_icons"></ion-icon>
             </ion-button>
         </div>
         <ng-template #auth>
                 <ion-button (click)="spotify.authorize()" class="sf_button">
-                    <ion-icon name="log-in-outline" class="icon ionicon-whatever sf_icons" slot="icon-only"></ion-icon>
+                    <ion-icon name="log-in-outline" class="sf_icons"></ion-icon>
                 </ion-button>
         </ng-template>
         </ion-buttons>

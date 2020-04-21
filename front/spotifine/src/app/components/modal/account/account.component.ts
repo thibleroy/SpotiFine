@@ -2,16 +2,18 @@ import {Component, Input, OnInit} from '@angular/core';
 import {IAccount} from "../../../../interfaces/account";
 import {SessionService} from "../../../../services/session.service";
 import {ModalController} from "@ionic/angular";
+import {ParameterComponent} from "../../parameter/parameter.component";
+import {IParam} from "../../../../interfaces/common";
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.scss'],
-  entryComponents: [require('../../parameter/parameter.component').ParameterComponent]
+  entryComponents: [ParameterComponent]
 })
 export class AccountComponent implements OnInit {
   @Input() account: IAccount;
-  constructor(private session: SessionService, private modalController: ModalController) { }
+  constructor(public session: SessionService, public modalController: ModalController) { }
 
   ngOnInit() {
 

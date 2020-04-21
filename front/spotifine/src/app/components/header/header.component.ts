@@ -11,14 +11,14 @@ import {ModalController} from "@ionic/angular";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private session: SessionService, private spotify: SpotifyConnectorService, private modalController: ModalController) { }
+  constructor(public session: SessionService, public spotify: SpotifyConnectorService, private modalController: ModalController) { }
 
   ngOnInit() {}
 
   get_account(){
     if (this.session.isAuth()){
       this.spotify.getAccount().subscribe(async (account) => {
-        console.log('account', account);
+        console.log('accounts', account);
         const modal = await this.modalController.create({component: AccountComponent, componentProps: {account: account}});
         await modal.present();
       });

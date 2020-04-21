@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {isObject} from "util";
-import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
-
+import {IParam} from '../../../interfaces/common';
 @Component({
   selector: 'sf-parameter',
   templateUrl: './parameter.component.html',
@@ -9,11 +7,11 @@ import {SpotifyConnectorService} from "../../../services/spotify-connector.servi
 })
 export class ParameterComponent implements OnInit {
   @Input() param: IParam
-  constructor(private spotifyConnectorService: SpotifyConnectorService) { }
+  constructor() { }
 
   ngOnInit() {}
   getStr(obj: any): string {
-    if (isObject(obj)) {
+    if (typeof(obj) === 'object') {
       return JSON.stringify(obj);
     }
     else return obj;
