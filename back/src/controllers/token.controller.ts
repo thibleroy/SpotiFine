@@ -7,12 +7,9 @@ export const token_controller = async(req: Request, res: Response, next: NextFun
         if (!refresh_token) {
             throw new ErrorHandler(401, 'No refresh token found in header');
         }
-        console.log('token controller');
         const new_access_token = await refreshAccessToken(<string> refresh_token);
-        console.log('token controller2');
         res.send(new_access_token);
     } catch (e){
         next(e);
     }
-
 }

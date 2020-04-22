@@ -10,7 +10,6 @@ export const account_controller = async (req: Request, res: Response, next: Next
         let user_account = await getAccount(<string> access_token);
         res.send(user_account);
     } catch (e) {
-        console.log('ici 5', e)
         next(e);
     }
 }

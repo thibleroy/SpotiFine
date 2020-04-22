@@ -9,7 +9,6 @@ export const login_controller = async(req: Request, res: Response, next: NextFun
             throw new ErrorHandler(400, 'No state found in header');
         }
         const ic: string = await getAuthURL(<string> state);
-        console.log('ic', ic);
         res.send(ic);
     } catch (e){
         next(e);
