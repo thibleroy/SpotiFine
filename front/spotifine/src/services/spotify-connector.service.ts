@@ -3,8 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Observable} from "rxjs";
 import {IAccount} from "../interfaces/account";
-import {SessionService} from "./session.service";
-
+import {randomString} from "../utils"
+import {ISpotifyToken} from '../interfaces/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,30 +12,31 @@ export class SpotifyConnectorService {
 
   api = `http://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
 
-  constructor(private http: HttpClient, private auth: SessionService) { }
+  constructor(private http: HttpClient) { }
 
-  getAuthorizeURL(): Observable<string>{
-    return this.http.get(`${this.api}/login`, {responseType: 'text'});
+  getAuthorizeURL(state: string): Observable<string>{
+    return this.http.get(`${this.api}/login`, {responseType: 'text', headers: {state: state}});
   }
 
-  getTokens(qP): Observable<any>{
-    return this.http.get(`${this.api}/callback`, {headers: qP});
+  getCallback(qP): Observable<{access_token: string, refresh_token: string}>{
+    return this.http.get<{access_token: string, refresh_token: string}>(`${this.api}/callback`, {headers: qP});
+  }
+
+  refreshToken(refresh_token: string): Observable<ISpotifyToken>{
+    return this.api_get('/token', {refresh_token: refresh_token});
   }
 
   getAccount(): Observable<IAccount>{
-    return this.api_get(`${this.api}/account`);
+    return this.api_get(`/account`);
   }
 
-  api_get(url: string, headers?: any): Observable<any> {
-    const sf_headers = {...headers,
-      authorization: this.auth.get_token()
-    }
-    console.log('headers', sf_headers);
-    return this.http.get(url, {headers: sf_headers})
+  api_get(path: string, headers?: any): Observable<any> {
+    return this.http.get(this.api + path, {headers: {... headers}})
   }
 
   authorize() {
-    this.getAuthorizeURL().subscribe((value => {
+    const state: string = randomString(7);
+    this.getAuthorizeURL(state).subscribe((value => {
       console.log('authURL value', value);
       window.location.assign(value);
     }));

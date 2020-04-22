@@ -1,5 +1,5 @@
-import {Router} from "express";
-import {account_controller} from '../controllers/account';
+import {Router} from 'express';
+import {account_controller} from '../controllers/account.controller';
 
 const router = Router();
 

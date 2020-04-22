@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {callback_controller} from "../controllers/callback";
+import {callback_controller} from "../controllers/callback.controller";
 
 const router = Router();
 

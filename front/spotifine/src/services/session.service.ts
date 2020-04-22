@@ -8,20 +8,26 @@ export class SessionService {
 
   constructor(private router: Router) { }
 
-  log_in(token: string){
-    localStorage.setItem('sf_token', token);
+  log_in(access_token: string, refresh_token: string){
+     localStorage.setItem('access_token', access_token);
+     localStorage.setItem('refresh_token', refresh_token);
   }
 
   async log_out(){
-    localStorage.removeItem('sf_token');
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
     await this.router.navigateByUrl('welcome');
   }
 
   isAuth(): boolean {
-    return this.get_token() !== null && this.get_token() !== ''
+    return this.get_access_token() !== null && this.get_access_token() !== '';
   }
 
-  get_token(): string {
-    return localStorage.getItem('sf_token')
+  get_access_token(): string {
+    return localStorage.getItem('access_token');
+  }
+
+  get_refresh_token(): string {
+    return localStorage.getItem('refresh_token');
   }
 }

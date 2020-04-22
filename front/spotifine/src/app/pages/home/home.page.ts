@@ -15,17 +15,17 @@ export class HomePage implements OnInit{
               public session: SessionService,
               private modalController: ModalController) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     if (JSON.stringify(this.router.getCurrentNavigation().finalUrl.queryParams) == JSON.stringify({})) {
       if (!this.session.isAuth()) {
-        this.router.navigateByUrl('welcome');
+        await this.router.navigateByUrl('welcome');
       }
     } else {
       console.log('qp', this.router.getCurrentNavigation().finalUrl.queryParams)
-        this.spotifyConnectorService.getTokens(this.router.getCurrentNavigation().finalUrl.queryParams).subscribe((val) => {
+        this.spotifyConnectorService.getCallback(this.router.getCurrentNavigation().finalUrl.queryParams).subscribe(async(val) => {
           console.log('val', val);
-          this.session.log_in(val.access_token)
-          this.router.navigateByUrl('home');
+          this.session.log_in(val.access_token, val.refresh_token);
+          await this.router.navigateByUrl('home');
         });
       }
   }

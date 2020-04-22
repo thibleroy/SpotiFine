@@ -1,10 +1,9 @@
-import {env} from "../../../lib/env";
-import SpotifyWebApi from "spotify-web-api-node";
+import {env} from '../../../lib/env';
+import {ISpotifyCredentials} from '../interfaces';
 
-export const credentials = {
+export const credentials: ISpotifyCredentials  = {
         clientId: env.SPOTIFY_CLIENT_ID,
         clientSecret: env.SPOTIFY_CLIENT_SECRET,
         redirectUri: env.SPOTIFY_REDIRECT_URI
     },
     scopes = ['user-read-private', 'user-read-email'];
-export const spotifyApi = new SpotifyWebApi(credentials);

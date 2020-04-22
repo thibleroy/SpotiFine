@@ -10,8 +10,6 @@ import {Router} from "@angular/router";
 })
 export class WelcomePage implements OnInit {
 
-  authURI: string;
-
   constructor(private spotifyConnectorService: SpotifyConnectorService, private session: SessionService, private router: Router) { }
 
   async ngOnInit() {
