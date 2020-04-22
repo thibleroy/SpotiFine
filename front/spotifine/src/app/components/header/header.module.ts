@@ -4,12 +4,14 @@ import {IonicModule} from "@ionic/angular";
 import {CommonModule} from "@angular/common";
 import {AccountModule} from "../modal/account/account.module";
 import {AccountComponent} from "../modal/account/account.component";
+import {StatusModule} from "../status/status.module";
 
 @NgModule({
     imports: [
         IonicModule,
         CommonModule,
-        AccountModule
+        AccountModule,
+        StatusModule
     ],
     exports: [HeaderComponent],
     declarations: [HeaderComponent],

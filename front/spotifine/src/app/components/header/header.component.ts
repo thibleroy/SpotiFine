@@ -5,7 +5,7 @@ import {AccountComponent} from "../modal/account/account.component";
 import {ModalController} from "@ionic/angular";
 
 @Component({
-  selector: 'app-header',
+  selector: 'sf-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -13,7 +13,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(public session: SessionService, public spotify: SpotifyConnectorService, private modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   get_account(){
     if (this.session.isAuth()){

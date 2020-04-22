@@ -6,7 +6,7 @@ import {ParameterComponent} from "../../parameter/parameter.component";
 import {IParam} from "../../../../interfaces/common";
 
 @Component({
-  selector: 'app-account',
+  selector: 'sf-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.scss'],
   entryComponents: [ParameterComponent]
