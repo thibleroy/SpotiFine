@@ -1,12 +1,11 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
-jobs:
-  build:
-    executor:
-      name: node/default
-    steps:
-      steps: # steps that comprise the `build` job
+
+jobs: # basic units of work in a run
+  build: 
+    docker: # use the Docker executor
+      # CircleCI node images available at: https://hub.docker.com/r/circleci/node/
+      - image: circleci/node:10.0-browsers
+    steps: # steps that comprise the `build` job
       - checkout # check out source code to working directory
       # Run a step to setup an environment variable
       # Redirect MY_ENV_VAR into $BASH_ENV
@@ -30,7 +29,9 @@ jobs:
       - run:
           name: "Print an env var stored in a Context"
           command: echo ${CONTEXT_ENV_VAR}
-workflows:
-    build:
-      jobs:
-        - build
+
+workflows: # a single workflow with a single job called build
+  build:
+    jobs:
+      - build:
+          context: Testing-Env-Vars
