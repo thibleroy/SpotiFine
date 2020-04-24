@@ -9,6 +9,8 @@ export class PlaylistComponent implements OnInit {
   @Input() playlist: SpotifyApi.PlaylistObjectSimplified
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('playlist', this.playlist)
+  }
 
 }

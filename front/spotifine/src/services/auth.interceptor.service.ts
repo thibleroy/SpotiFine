@@ -13,7 +13,6 @@ export class AuthInterceptorService implements HttpInterceptor {
         if (access_token) {
             request = request.clone(set_header(this.spotify.spotifyApi.getAccessToken()));
         }
-
         return next.handle(request);
     }
 }
