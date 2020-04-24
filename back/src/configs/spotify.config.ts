@@ -1,5 +1,5 @@
 import {env} from '../../../lib/env';
-import {ISpotifyCredentials} from '../interfaces';
+import {ISpotifyCredentials} from '../../../lib/interfaces/auth';
 
 export const credentials: ISpotifyCredentials  = {
         clientId: env.SPOTIFY_CLIENT_ID,

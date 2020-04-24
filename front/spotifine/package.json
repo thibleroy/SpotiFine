@@ -45,6 +45,7 @@
     "@ionic/angular": "^5.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
+    "spotify-web-api-js": "^1.2.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

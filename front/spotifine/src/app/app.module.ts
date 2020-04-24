@@ -11,6 +11,7 @@ import {SpotifyConnectorService} from "../services/spotify-connector.service";
 import {SessionService} from "../services/session.service";
 import {ErrorInterceptorService} from "../services/error.interceptor.service";
 import {AuthInterceptorService} from "../services/auth.interceptor.service";
+import {AuthService} from "../services/auth.service";
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {AuthInterceptorService} from "../services/auth.interceptor.service";
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     SpotifyConnectorService,
     SessionService,
+      AuthService,
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true}
   ],

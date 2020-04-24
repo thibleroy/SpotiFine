@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfilePageModule)
+  },  {
+    path: 'callback',
+    loadChildren: () => import('./pages/callback/callback.module').then( m => m.CallbackPageModule)
   },
+
 
 
 ];

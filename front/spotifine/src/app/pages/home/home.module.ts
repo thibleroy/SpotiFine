@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import {HeaderModule} from "../../components/header/header.module";
 import {FooterModule} from "../../components/footer/footer.module";
+import {PlaylistsModule} from "../../components/playlists/playlists.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {FooterModule} from "../../components/footer/footer.module";
       }
     ]),
       HeaderModule,
-      FooterModule
+      FooterModule,
+      PlaylistsModule
   ],
   entryComponents: [],
   declarations: [HomePage]

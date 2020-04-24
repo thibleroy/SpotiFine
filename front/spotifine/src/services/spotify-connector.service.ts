@@ -1,46 +1,34 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../environments/environment";
-import {Observable} from "rxjs";
-import {IAccount} from "../interfaces/account";
-import {randomString} from "../utils"
-import {ISpotifyToken} from '../interfaces/auth';
+import SpotifyWebApi from 'spotify-web-api-js';
+import {SessionService} from "./session.service";
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class SpotifyConnectorService {
 
-  api = `http://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
-
-  constructor(private http: HttpClient) { }
-
-  getAuthorizeURL(state: string): Observable<string>{
-    return this.http.get(`${this.api}/login`, {responseType: 'text', headers: {state: state}});
+  spotifyApi: SpotifyWebApi.SpotifyWebApiJs;
+  constructor(private session: SessionService) {
+    this.spotifyApi = new SpotifyWebApi();
   }
-
-  getCallback(qP): Observable<{access_token: string, refresh_token: string}>{
-    return this.http.get<{access_token: string, refresh_token: string}>(`${this.api}/callback`, {headers: qP});
+  async setTokenToSpotifyObject() {
+    await this.spotifyApi.setAccessToken(this.session.get_access_token());
   }
-
-  refreshToken(refresh_token: string): Observable<ISpotifyToken>{
-    return this.api_get('/token', {refresh_token: refresh_token});
+  async getAccount(): Promise<SpotifyApi.CurrentUsersProfileResponse>{
+    await this.setTokenToSpotifyObject()
+    return await this.spotifyApi.getMe();
   }
-
-  getAccount(): Observable<IAccount>{
-    return this.api_get(`/account`);
+  async getUserPlaylists(): Promise<SpotifyApi.ListOfUsersPlaylistsResponse> {
+    await this.setTokenToSpotifyObject();
+    return await this.spotifyApi.getUserPlaylists();
   }
-
-  api_get(path: string, headers?: any): Observable<any> {
-    return this.http.get(this.api + path, {headers: {... headers}})
+  async is_token_valid(): Promise<boolean> {
+    try {
+      await this.getAccount();
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
-
-  authorize() {
-    const state: string = randomString(7);
-    this.getAuthorizeURL(state).subscribe((value => {
-      console.log('authURL value', value);
-      window.location.assign(value);
-    }));
-
-  }
-
 }

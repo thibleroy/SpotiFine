@@ -81,6 +81,7 @@
   --main-color: #E75050;
   --second-color: #27d7a3;
   --text-color: #0d0d0d;
+  --detail-color: #808080;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -247,11 +248,23 @@ Custom CSS variables
   color: var(--text-color)
 }
 
+.sf_detail {
+  @extend .sf_text;
+  text-align: center;
+  font-size: small;
+  color: var(--detail-color);
+}
+
 .sf_title {
   font-family: 'Permanent Marker', cursive;
   color: var(--main-color);
   font-weight: bold;
   font-style: normal;
+}
+
+.sf_avatar {
+  border: 1px solid red;
+  border-radius: 25px;
 }
 
 .sf_emoji {

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IParam} from '../../../interfaces/common';
+import {IParam} from '../../../interfaces';
 @Component({
   selector: 'sf-parameter',
   templateUrl: './parameter.component.html',

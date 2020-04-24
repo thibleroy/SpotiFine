@@ -1,12 +1,16 @@
-<ion-chip color="danger" *ngIf="loaded">
-  <ion-avatar>
-    <ion-img src="{{account.images[0].url}}">
-    </ion-img>
-  </ion-avatar>
-  <ion-label class="sf_text">
-    Connected as <ion-label class="sf_title">{{account.display_name}}</ion-label>
-  </ion-label>
-</ion-chip>
-
-
-
+  <ion-chip (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
+    <ion-avatar>
+      <ion-img class="sf_avatar" src="{{account.images[0].url}}">
+      </ion-img>
+    </ion-avatar>
+    <ion-label class="sf_text" style="text-align: left">
+      Connected as <ion-label class="sf_title">{{account.display_name}}</ion-label>
+    </ion-label>
+  </ion-chip>
+  <ng-template #mobile>
+    <ion-buttons>
+      <ion-button (click)="get_account()">
+        <ion-icon name="person-outline" class="sf_icons"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ng-template>

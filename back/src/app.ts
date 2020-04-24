@@ -13,7 +13,8 @@ routers.forEach((router) => {
     app.use(router.route, router.router);
 });
 app.use(error_handler);
-app.listen(env.SF_BACKEND_PORT, function () {
-    console.log('App listening on port '+ env.SF_BACKEND_PORT);
+const port = env.SF_BACKEND_PORT || 12345;
+app.listen(port , function () {
+    console.log('App listening on port '+ port);
 });
 export default app;

@@ -1,9 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IAccount} from "../../../../interfaces/account";
-import {SessionService} from "../../../../services/session.service";
 import {ModalController} from "@ionic/angular";
 import {ParameterComponent} from "../../parameter/parameter.component";
-import {IParam} from "../../../../interfaces/common";
+import {IParam} from "../../../../interfaces";
+import {SessionService} from "../../../../services/session.service";
 
 @Component({
   selector: 'sf-account',
@@ -12,12 +11,9 @@ import {IParam} from "../../../../interfaces/common";
   entryComponents: [ParameterComponent]
 })
 export class AccountComponent implements OnInit {
-  @Input() account: IAccount;
-  constructor(public session: SessionService, public modalController: ModalController) { }
-
-  ngOnInit() {
-
-  }
+  @Input() account: SpotifyApi.CurrentUsersProfileResponse;
+  constructor(public modalController: ModalController, private session: SessionService) { }
+  ngOnInit() {}
   getIterable(obj: any): IParam[]{
     let res: IParam[] = [];
     for (const property in obj) {
@@ -32,11 +28,11 @@ export class AccountComponent implements OnInit {
     }
     return res;
   }
-  getstr(obj): string{
-    return JSON.stringify(obj);
-  }
-  async logout() {
-    await this.modalController.dismiss();
+  async logout(){
     await this.session.log_out();
+    await this.close();
+  }
+  async close(){
+    await this.modalController.dismiss();
   }
 }
