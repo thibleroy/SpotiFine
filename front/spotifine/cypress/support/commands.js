@@ -23,9 +23,6 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Commands.add('logout', () => {
-    localStorage.removeItem('token');
-})
 Cypress.Commands.add('login', (bearer) => {
-    localStorage.setItem('token', bearer);
-})
+    localStorage.setItem('access_token', bearer);
+});

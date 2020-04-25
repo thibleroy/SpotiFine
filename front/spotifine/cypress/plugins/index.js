@@ -11,7 +11,7 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-require('cypress-watch-and-reload/plugins')
+require('cypress-watch-and-reload/plugins');
 /**
  * @type {Cypress.PluginConfig}
  */
