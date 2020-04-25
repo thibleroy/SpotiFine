@@ -12,7 +12,10 @@
       {{account.display_name}}
     </ion-title>
     <ion-avatar slot="start" class="sf_clean_item">
-      <ion-img class="sf_avatar" src="{{account.images[0].url}}"></ion-img>
+      <ion-img *ngIf="account.images.length>0 else no_img" class="sf_avatar" src="{{account.images[0].url}}"></ion-img>
+      <ng-template #no_img>
+        <ion-img data-cy="avatar_modal" class="sf_avatar" src="../../../assets/icon/account.svg"></ion-img>
+      </ng-template>
     </ion-avatar>
   </ion-toolbar>
 </ion-header>

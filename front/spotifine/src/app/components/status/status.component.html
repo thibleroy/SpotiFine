@@ -1,4 +1,4 @@
-  <ion-chip (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
+  <ion-chip data-cy="me_btn" (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
     <ion-avatar>
       <ion-img *ngIf="account.images.length>0 ; else no_img" data-cy="status_img" class="sf_avatar" src="{{account.images[0].url}}">
       </ion-img>
