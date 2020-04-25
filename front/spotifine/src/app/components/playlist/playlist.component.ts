@@ -10,7 +10,6 @@ export class PlaylistComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('playlist', this.playlist)
   }
 
 }

@@ -17,13 +17,16 @@
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.3",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "cypress": "^4.4.0",
+    "cypress-watch-and-reload": "^1.2.14"
   },
   "scripts": {
     "build": "node_modules/.bin/tsc",
     "dev": "node_modules/.bin/concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/back/src/app.js\"",
     "serve": "npm run build && npm run dev",
-    "start": "node_modules/.bin/tsc && node dist/back/src/app.js"
+    "start": "node_modules/.bin/tsc && node dist/back/src/app.js",
+    "test": "node_modules/.bin/cypress open"
   },
   "keywords": [],
   "author": "",
