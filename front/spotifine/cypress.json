@@ -1,6 +1,6 @@
 {
   "video": false,
-  "baseUrl": "http://localhost:8100",
+  "baseUrl": "https://localhost:8100",
   "cypress-watch-and-reload": {
     "watch": "src/**/*"
   },

@@ -4,7 +4,7 @@
   "author": "Thibault Leroy",
   "homepage": "https://github.com/thibleroy",
   "scripts": {
-    "serve": "node_modules/.bin/ng serve --host=localhost --port=8100",
+    "serve": "node_modules/.bin/ng serve --host=localhost --port=8100 --ssl true --ssl-cert ../../lib/https_credentials/server.cert --ssl-key ../../lib/https_credentials/server.key",
     "build:dev": "node_modules/.bin/ng build",
     "build:prod": "node_modules/.bin/ng build --prod",
     "copy": "node_modules/.bin/cap copy",
