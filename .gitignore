@@ -2,7 +2,7 @@ node_modules
 dist
 .idea
 .env
-
+*.pem
 # exclude every credentials
 lib/https_credentials/*
 !lib/https_credentials/.gitkeep 

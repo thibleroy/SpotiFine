@@ -23,8 +23,8 @@ app.use(error_handler);
 const port = env.SF_BACKEND_PORT || 12345;
 
 const server = https.createServer({
-    'key' : fs.readFileSync('../lib/https_credentials/server.key', 'utf8');,
-    'cert' : fs.readFileSync('../lib/https_credentials/server.cert', 'utf8');
+    key: fs.readFileSync('../lib/https_credentials/server.key', 'utf8'),
+    cert: fs.readFileSync('../lib/https_credentials/server.cert', 'utf8')
 }, app);
 
 server.listen(port, () => {
