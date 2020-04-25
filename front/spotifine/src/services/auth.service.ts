@@ -9,7 +9,7 @@ import {ISpotifyToken} from "../../../../lib/interfaces/auth";
 })
 export class AuthService {
 
-    api = `http://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
+    api = `https://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
 
     constructor(private http: HttpClient) {}
 
