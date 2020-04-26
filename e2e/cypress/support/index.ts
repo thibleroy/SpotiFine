@@ -1,5 +1,6 @@
 import './commands';
 import 'cypress-watch-and-reload/support';
+import '@cypress/code-coverage/support';
 declare global {
     namespace Cypress {
         interface Chainable {

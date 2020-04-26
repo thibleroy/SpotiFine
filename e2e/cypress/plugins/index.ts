@@ -1,5 +1,5 @@
 require('cypress-watch-and-reload/plugins');
-
-module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {
-
+module.exports = (on, config) => {
+     require('@cypress/code-coverage/task')(on, config);
+     return config;
 }

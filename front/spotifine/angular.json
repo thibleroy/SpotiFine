@@ -83,17 +83,10 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "app:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "app:build:production"
-            },
-            "ci": {
-              "progress": false
-            }
+            "browserTarget": "app:build",
+            "extraWebpackConfig": "../../e2e/coverage.webpack.js"
           }
         },
         "extract-i18n": {
