@@ -8,6 +8,7 @@ declare global {
              * @example cy.dataCy('greeting')
              */
             login(access_token: string): Chainable<any>;
+            logout(): Chainable<any>
             dataCy(target: string): Chainable<Element>;
         }
     }

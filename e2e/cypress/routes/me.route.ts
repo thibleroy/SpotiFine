@@ -8,3 +8,8 @@ export const me_playlists = () => cy.route({
     response: {},
     method: 'GET'
 });
+export const me_artists = (fixture) => cy.route({
+    url: 'https://api.spotify.com/v1/me/top/artists',
+    response: `fixture:${fixture}`,
+    method: 'GET'
+});
