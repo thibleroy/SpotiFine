@@ -15,12 +15,13 @@
     "install:lib": "cd lib && npm install",
     "install:back": "npm run install:lib && cd back && npm install",
     "install:front": "npm run install:lib && cd front/spotifine && npm install",
+    "install:e2e": "cd e2e && npm install",
     "run:back": "npm run --prefix ./back dev",
     "run:front": "npm run --prefix ./front/spotifine serve",
     "back:dev": "npm run print:env && npm run install:back && npm run run:back",
     "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front",
-    "test:runner": "npm run --prefix ./e2e test:runner",
-    "test:dashboard": "npm run --prefix ./e2e test:dashboard"
+    "test:runner": "npm run install:e2e && npm run --prefix ./e2e test:runner",
+    "test:dashboard": "npm run install:e2e && npm run --prefix ./e2e test:dashboard"
   },
   "devDependencies": {
     "public-ip": "^4.0.1",

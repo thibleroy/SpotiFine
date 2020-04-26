@@ -14,7 +14,6 @@ describe('verifies web ui', () => {
         cy.visit('/home')
     })
     it('verifies web title', () => {
-        before(() => cy.visit('/home'))
         cy.title().should('eq', 'Spotifine')
     })
 })
