@@ -1,0 +1,9 @@
+{
+  "video": false,
+  "baseUrl": "https://localhost:8100",
+  "cypress-watch-and-reload": {
+    "watch": "../front/**/*"
+  },
+  "supportFile": "cypress/support/index.ts",
+  "pluginsFile": "cypress/plugins/index.ts"
+}

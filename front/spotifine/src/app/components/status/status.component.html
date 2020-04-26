@@ -1,9 +1,9 @@
-  <ion-chip data-cy="me_btn" (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
+  <ion-chip [attr.data-cy]="identifiers.me_btn" (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
     <ion-avatar>
-      <ion-img *ngIf="account.images.length>0 ; else no_img" data-cy="status_img" class="sf_avatar" src="{{account.images[0].url}}">
+      <ion-img *ngIf="account.images.length>0 ; else no_img" [attr.data-cy]="identifiers.status_img" class="sf_avatar" src="{{account.images[0].url}}">
       </ion-img>
         <ng-template #no_img>
-            <ion-img data-cy="status_img" class="sf_avatar" src="../../assets/icon/account.svg"></ion-img>
+            <ion-img [attr.data-cy]="identifiers.status_img" class="sf_avatar" src="../../assets/icon/account.svg"></ion-img>
         </ng-template>
     </ion-avatar>
     <ion-label class="sf_text" style="text-align: left">

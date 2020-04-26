@@ -3,7 +3,7 @@ import {SpotifyConnectorService} from "../../../services/spotify-connector.servi
 import {AccountComponent} from "../modal/account/account.component";
 import {SessionService} from "../../../services/session.service";
 import {ModalController} from "@ionic/angular";
-
+import {identifiers} from '../../../html_identifiers';
 @Component({
   selector: 'sf-status',
   templateUrl: './status.component.html',
@@ -11,6 +11,7 @@ import {ModalController} from "@ionic/angular";
 })
 export class StatusComponent implements OnInit {
   @Input() account: SpotifyApi.CurrentUsersProfileResponse;
+  identifiers = identifiers;
   constructor(private spotify: SpotifyConnectorService, private session: SessionService, private modalController: ModalController) {}
 
   async ngOnInit() {

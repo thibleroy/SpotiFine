@@ -18,11 +18,15 @@
     "run:back": "npm run --prefix ./back dev",
     "run:front": "npm run --prefix ./front/spotifine serve",
     "back:dev": "npm run print:env && npm run install:back && npm run run:back",
-    "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front"
+    "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front",
+    "test:runner": "npm run --prefix ./e2e test:runner",
+    "test:dashboard": "npm run --prefix ./e2e test:dashboard"
   },
   "devDependencies": {
+    "public-ip": "^4.0.1",
     "shelljs": "^0.8.3",
-    "public-ip": "^4.0.1"
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

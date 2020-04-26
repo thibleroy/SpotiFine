@@ -1,5 +1,5 @@
-import {targets} from '../targets';
 const token = '123';
+import {identifiers} from '../../../front/spotifine/src/html_identifiers';
 import {me, me_playlists} from '../routes/me.route';
 describe('avatar', () => {
     beforeEach(() => {
@@ -14,10 +14,10 @@ describe('avatar', () => {
     })
     it('show avatar even if no img in header', () => {
         cy.wait('@me');
-        cy.get(targets.status_img).should('have.prop', 'src').should('contain', 'account')
+        cy.dataCy(identifiers.status_img).should('have.prop', 'src').should('contain', 'account')
     });
     it('show avatar even if no img in account modal', () => {
-        cy.get(targets.me_btn).should('be.visible').click();
-        cy.get(targets.avatar_modal).should('have.prop', 'src').should('contain', 'account');
+        cy.dataCy(identifiers.me_btn).click();
+        cy.dataCy(identifiers.avatar_modal).should('have.prop', 'src').should('contain', 'account');
     });
 });
