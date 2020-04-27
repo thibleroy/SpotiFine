@@ -1,8 +1,8 @@
 {
   "video": false,
-  "baseUrl": "https://localhost:8100",
+  "baseUrl": "https://localhost:12345",
   "cypress-watch-and-reload": {
-    "watch": "../front/**/*"
+    "watch": "../back/**/*"
   },
   "supportFile": "cypress/support/index.ts",
   "pluginsFile": "cypress/plugins/index.ts"
