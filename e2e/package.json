@@ -9,7 +9,6 @@
     "@cypress/code-coverage": "^3.5.3",
     "cypress": "^4.4.1",
     "cypress-watch-and-reload": "^1.2.14",
-    "istanbul-instrumenter-loader": "^3.0.1",
     "typescript": "^3.8.3",
     "ts-loader": "6.0.4",
     "ts-node": "^7.0.1"

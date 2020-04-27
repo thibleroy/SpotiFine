@@ -5,7 +5,6 @@ module.exports = {
                 test: /\.(js|ts)$/,
                 loader: 'istanbul-instrumenter-loader',
                 options: { esModules: true },
-                excludeAfterRemap: false,
                 enforce: 'post',
                 include: require('path').join(__dirname, '..', 'front', 'spotifine', 'src'),
                 exclude: [

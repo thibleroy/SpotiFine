@@ -17,13 +17,13 @@ export class HomePage implements OnInit{
               public session: SessionService,
               private spotify: SpotifyConnectorService) {}
   async ngOnInit() {
+      this.playlists_loaded = false;
       await this.getPlaylists();
       if (!this.session.isAuth()) {
         await this.router.navigateByUrl('welcome');
       }
   }
   async getPlaylists() {
-      this.playlists_loaded = false;
       this.playlists = await this.spotify.getUserPlaylists();
       this.playlists_loaded = true;
   }
