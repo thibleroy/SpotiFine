@@ -13,8 +13,8 @@ export class WelcomePage implements OnInit {
   constructor(private spotifyConnectorService: SpotifyConnectorService, private session: SessionService, private router: Router) { }
 
   async ngOnInit() {
-    if (this.session.isAuth()) {
-      await this.router.navigate(['home']);
-    }
+    //if (this.session.isAuth()) {
+    //  await this.router.navigate(['home']);
+    //}
   }
 }

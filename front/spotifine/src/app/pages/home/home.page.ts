@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {SessionService} from "../../../services/session.service";
-import {AuthService} from "../../../services/auth.service";
 import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
 import ListOfCurrentUsersPlaylistsResponse = SpotifyApi.ListOfCurrentUsersPlaylistsResponse;
 @Component({
@@ -13,7 +12,6 @@ export class HomePage implements OnInit{
     playlists: ListOfCurrentUsersPlaylistsResponse;
     playlists_loaded: boolean;
   constructor(private router: Router,
-              private authService: AuthService,
               public session: SessionService,
               private spotify: SpotifyConnectorService) {}
   async ngOnInit() {

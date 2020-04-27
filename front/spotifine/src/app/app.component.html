@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main-content" side="start" menuId="first">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list id="inbox-list" lines="none">
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of routes">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" [class.active.item]="selectedPath === p.url">
+            <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+            <ion-label>{{ p.name }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <!-- content -->
+  <ion-content id="main-content">
+    <ion-router-outlet contentId="main-content"></ion-router-outlet>
+  </ion-content>
+
+  <!-- footer -->
+  <sf-footer></sf-footer>
+
 </ion-app>
