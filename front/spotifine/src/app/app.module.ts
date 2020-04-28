@@ -12,13 +12,11 @@ import {SessionService} from "../services/session.service";
 import {ErrorInterceptorService} from "../services/error.interceptor.service";
 import {AuthInterceptorService} from "../services/auth.interceptor.service";
 import {AuthService} from "../services/auth.service";
-import {HeaderModule} from "./components/header/header.module";
-import {FooterModule} from "./components/footer/footer.module";
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, HeaderModule, FooterModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

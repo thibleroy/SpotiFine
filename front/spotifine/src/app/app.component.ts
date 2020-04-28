@@ -13,7 +13,7 @@ import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
 })
 export class AppComponent {
 
-  routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined);
+  routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined &&  route.data_cy != undefined && route.icon != undefined);
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -22,7 +22,9 @@ export class AppComponent {
   ) {
 
     this.router.events.subscribe((event: RouterEvent) => {
-      this.selectedPath = event.url;
+      if(event.url != undefined){
+        this.selectedPath = event.url;
+      }
     });
 
     this.initializeApp();

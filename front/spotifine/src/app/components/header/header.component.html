@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons *ngIf="session.isAuth()" slot="start">
-            <ion-menu-button></ion-menu-button>
+        <ion-buttons [attr.data-cy]="identifiers.header_side_menu_button" *ngIf="session.isAuth()" slot="start">
+            <ion-menu-button ></ion-menu-button>
           </ion-buttons>
         <div *ngIf="session.isAuth();else disconnected" slot="end">
             <ion-buttons slot="end" *ngIf="this.loaded">
@@ -15,7 +15,7 @@
                 </ion-button>
             </ion-buttons>
         </ng-template>
-        <ion-label slot="start" class="sf_general_title">
+        <ion-label *ngIf="currentWindowWidth < 992" slot="start" class="sf_general_title">
             SPOTIFINE
         </ion-label>
     </ion-toolbar>

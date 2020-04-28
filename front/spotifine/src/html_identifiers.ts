@@ -1,4 +1,10 @@
 export const identifiers = {
+
+    //side-menu
+    header_side_menu_button : 'header_side_menu_button',
+    home_route: 'home_route',
+    welcome_route: 'welcome_route',
+
     email_input: 'emailinput',
     password_input: 'passwordinput',
     login_button: 'login_button',
