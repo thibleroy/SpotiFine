@@ -7,7 +7,7 @@ import {set_headers} from './middlewares/headers.middleware'
 import {routers} from './routes/index.route';
 import {error_handler, } from "./middlewares/errors.middleware";
 import https from 'https';
-
+import {connect_db} from "./utils/mongo.util";
 
 const app = express();
 app.use(set_headers);
@@ -19,6 +19,11 @@ routers.forEach((router) => {
 });
 
 app.use(error_handler);
+if(env.PRODUCTION === 'true') {
+    connect_db('spotifine');
+} else {
+    connect_db('cypress');
+}
 
 const port = env.SF_BACKEND_PORT || 12345;
 

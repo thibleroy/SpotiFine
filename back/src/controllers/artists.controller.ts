@@ -4,7 +4,7 @@ import {ErrorHandler} from "../utils/error.util";
 
 export const artists_get_controller = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const artists = await get_artists();
+        const artists = await get_artists(req.params.id);
         if (artists) res.send({value: artists});
         else throw new ErrorHandler(500, 'db error');
     } catch (e) {

@@ -1,16 +1,12 @@
-import mongoose, { Schema, Document } from 'mongoose';
-import {IUser} from './user.model';
+import {User} from './user.model';
+import {prop, Ref, getModelForClass} from "@typegoose/typegoose";
 
-export interface IArtist extends Document {
-    owner: IUser['id'];
-    name: string;
-    spotify_id: string;
+export class Artist{
+    @prop({ ref: User })
+    public user?: Ref<User>;
+    public name?: string;
+    public spotify_id?: string;
+    private rank?: number
 }
 
-const ArtistsSchema: Schema = new Schema({
-    owner: { type: Schema.Types.ObjectId, required: true },
-    name: { type: String, required: true },
-    spotify_id: { type: String, required: true }
-});
-
-export default mongoose.model<IArtist>('Artists', ArtistsSchema);
+export const ArtistModel =  getModelForClass(Artist);

@@ -1,14 +1,11 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import {prop, getModelForClass} from '@typegoose/typegoose';
 
-export interface IUser extends Document{
-    id: string;
-    token: string
+export class User{
+    @prop()
+    public spotify_id?: string;
+
+    @prop()
+    private refresh_token?: string
 }
-
-const UserSchema: Schema = new Schema({
-    id: { type: String, required: true, unique: true },
-    token: { type: String, required: true },
-});
-
 // Export the model and return your IUser interface
-export default mongoose.model<IUser>('Artists', UserSchema);
+export const UserModel = getModelForClass(User);

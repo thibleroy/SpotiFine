@@ -6,7 +6,7 @@
     "test:dashboard": "node_modules/.bin/cypress open"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.5.3",
+    "@cypress/code-coverage": "^3.5.4",
     "cypress": "^4.4.1",
     "cypress-watch-and-reload": "^1.2.14",
     "typescript": "^3.8.3",
