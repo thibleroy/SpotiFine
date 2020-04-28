@@ -15,7 +15,7 @@ declare global {
              */
             login(access_token: string): Chainable<any>;
             dataCy(target: string): Chainable<Element>;
-            cleanDB(): Chainable<any>
+            cleanDB(target: string): Chainable<any>
         }
     }
 }

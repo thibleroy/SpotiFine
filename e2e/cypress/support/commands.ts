@@ -6,7 +6,7 @@ Cypress.Commands.add('dataCy', (target: string) => {
 });
 Cypress.Commands.add('cleanDB', (target: string) => {
     cy.request({
-        url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/user`,
+        url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${target}`,
         qs: {
             spotify_id: Cypress.env('SPOTIFY_USER_ID')
         },
