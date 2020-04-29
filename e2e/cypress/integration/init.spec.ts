@@ -11,9 +11,9 @@ describe('cypress is working with typescript', () => {
 
 describe('verifies web ui', () => {
     beforeEach(() => {
-        cy.visit('/home')
+        cy.visit('/home');
     })
     it('verifies web title', () => {
-        cy.title().should('eq', 'Spotifine')
+        cy.title().should('eq', 'Spotifine');
     })
 })

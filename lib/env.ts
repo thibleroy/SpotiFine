@@ -14,5 +14,8 @@ export const env = {
     SPOTIFY_ACCOUNT_URI: process.env.SPOTIFY_ACCOUNTS_URI,
     SF_FRONTEND_PORT: process.env.SF_FRONTEND_PORT,
     SF_FRONTEND_ADDR_DEV: process.env.SF_FRONTEND_ADDR_DEV,
-    SPOTIFY_REDIRECT_URI: `https://${process.env.SF_FRONTEND_ADDR_DEV}:${parseInt(process.env.SF_FRONTEND_PORT || '')}/callback`
+    SPOTIFY_REDIRECT_URI: `https://${process.env.SF_FRONTEND_ADDR_DEV}:${parseInt(process.env.SF_FRONTEND_PORT || '')}/callback`,
+    MONGODB_URI: process.env.MONGODB_URI,
+    MONGODB_PORT: process.env.MONGODB_PORT,
+    PRODUCTION: process.env.PRODUCTION
 }

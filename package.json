@@ -20,8 +20,8 @@
     "run:front": "npm run --prefix ./front/spotifine serve",
     "back:dev": "npm run print:env && npm run install:back && npm run run:back",
     "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front",
-    "test:runner": "npm run install:e2e && npm run --prefix ./e2e test:runner",
-    "test:dashboard": "npm run install:e2e && npm run --prefix ./e2e test:dashboard"
+    "e2e:runner": "npm run install:e2e && npm run --prefix ./e2e test:runner",
+    "e2e:dashboard": "npm run install:e2e && npm run --prefix ./e2e test:dashboard"
   },
   "devDependencies": {
     "public-ip": "^4.0.1",

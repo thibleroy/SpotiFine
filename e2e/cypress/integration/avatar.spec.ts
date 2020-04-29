@@ -11,7 +11,7 @@ describe('avatar', () => {
     });
     it('current path should be home', () => {
         cy.location('pathname').should('contain', '/home');
-    })
+    });
     it('show avatar even if no img in header', () => {
         cy.wait('@me');
         cy.dataCy(identifiers.status_img).should('have.prop', 'src').should('contain', 'account')

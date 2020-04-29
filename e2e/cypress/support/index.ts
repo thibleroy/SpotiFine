@@ -1,5 +1,11 @@
 import './commands';
-import 'cypress-watch-and-reload/support';
+if (Cypress.env('TDD')) {
+    import('cypress-watch-and-reload/support');
+}
+
+if(Cypress.env('coverage')) {
+    import('@cypress/code-coverage/support');
+}
 declare global {
     namespace Cypress {
         interface Chainable {
@@ -10,6 +16,7 @@ declare global {
             login(access_token: string): Chainable<any>;
             logout(): Chainable<any>
             dataCy(target: string): Chainable<Element>;
+            cleanDB(): Chainable<any>
         }
     }
 }
