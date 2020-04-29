@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" when="lg">
     <ion-menu contentId="main-content" side="start" menuId="first">
       <ion-header>
         <ion-toolbar>
@@ -9,8 +9,8 @@
       <ion-content>
         <ion-list id="inbox-list" lines="none">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of routes">
-            <ion-item routerDirection="root" [routerLink]="[p.path]" [class.active.item]="selectedPath.includes(p.path)"
-              [attr.data-cy]="p.data_cy" >
+            <ion-item routerDirection="root" button="true" [routerLink]="[p.path]" [class.active.item]="selectedPath.includes(p.path)"
+              [attr.data-cy]="p.data_cy">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.name }}</ion-label>
             </ion-item>
@@ -23,5 +23,6 @@
     <ion-content id="main-content">
       <ion-router-outlet></ion-router-outlet>
     </ion-content>
+    
   </ion-split-pane>
 </ion-app>

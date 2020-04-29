@@ -17,7 +17,7 @@ describe('top artits', () => {
         me_artists('top_artists/empty_top_artists.json').as('me/artists');
         cy.visit('/top_artists');
         cy.location('pathname').should('contain', '/top_artists');
-        cy.contains('No artists available')
+        cy.contains('No artist available')
     })
 
 
