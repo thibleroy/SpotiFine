@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router, RouterEvent } from '@angular/router';
 import { routes } from './app-routing.module'
 import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
+import {identifiers} from "../html_identifiers";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-
+  identifiers = identifiers;
   routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined &&  route.data_cy != undefined && route.icon != undefined);
   constructor(
     private platform: Platform,
@@ -27,6 +28,9 @@ export class AppComponent {
       }
     });
 
+    if(window.Cypress) {
+      console.log('under test');
+    }
     this.initializeApp();
   }
 
