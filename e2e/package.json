@@ -6,12 +6,13 @@
     "test:dashboard": "node_modules/.bin/cypress open"
   },
   "devDependencies": {
+    "@bahmutov/cy-api": "^1.4.2",
     "@cypress/code-coverage": "^3.5.4",
     "cypress": "^4.4.1",
     "cypress-watch-and-reload": "^1.2.14",
-    "typescript": "^3.8.3",
     "ts-loader": "6.0.4",
-    "ts-node": "^7.0.1"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
     "@types/node": "^13.13.2"

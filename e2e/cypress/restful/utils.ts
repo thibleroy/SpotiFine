@@ -1,8 +1,7 @@
 import {METHOD, Method} from "./interfaces";
-
 const method_factory = (name: string, route: string) => {
     return () => {
-        return cy.request({
+        return cy.api({
             url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}`,
             qs: {
                 spotify_id: Cypress.env('SPOTIFY_USER_ID')

@@ -1,4 +1,6 @@
 import './commands';
+import('@bahmutov/cy-api/support');
+
 if (Cypress.env('TDD')) {
     import('cypress-watch-and-reload/support');
 }
@@ -15,7 +17,7 @@ declare global {
              */
             login(access_token: string): Chainable<any>;
             dataCy(target: string): Chainable<Element>;
-            cleanDB(target: string): Chainable<any>
+            cleanDB(target: string): Chainable<any>;
         }
     }
 }
