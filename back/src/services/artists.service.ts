@@ -1,16 +1,18 @@
-import {Artist, ArtistModel} from "../models/artists.model";
+import {Artists, ArtistsModel} from "../models/artists.model";
+import {User} from "../models/user.model";
 
-export const get_artists = async(user_id:string): Promise<Artist[]>  => {
-    return ArtistModel.find({'owner.id': user_id});
+export const get_artists = async(spotifyId: string): Promise<Artists|null>  => {
+    return ArtistsModel.findOne({'user.spotifyId': spotifyId});
 }
-
-export const post_artist = async(user_id: string, artist: Artist): Promise<Artist>  => {
-    const artistModel = new ArtistModel(artist);
-    return artistModel.save();
+export const post_artists = async(artists: SpotifyApi.UsersTopArtistsResponse, spotifyId: string): Promise<Artists|null>  => {
+    const user: User = {spotifyId: spotifyId};
+    const arts: Artists = {user: user, artists: artists};
+    console.log('arts', artists.href);
+    return ArtistsModel.create(arts as Artists);
 }
-export const put_artist = async(artist: Artist): Promise<Artist>  => {
-    return ArtistModel.updateOne({user_id: artist.user, spotify_id: artist.spotify_id}, artist);
+export const put_artists = async(artists: Artists, spotifyId:string): Promise<Artists|null>  => {
+    return ArtistsModel.findOneAndUpdate({'user.spotifyId': spotifyId}, artists);
 }
-export const delete_artist = async(user_id: string, artist: Artist): Promise<any>  => {
-    return ArtistModel.deleteOne({user_id: artist.user,spotify_id: artist.spotify_id});
+export const delete_artists = async( spotifyId:string): Promise<Artists|null>  => {
+    return ArtistsModel.findOneAndDelete({'user.spotifyId': spotifyId});
 }

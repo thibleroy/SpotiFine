@@ -18,6 +18,7 @@ declare global {
             login(access_token: string): Chainable<any>;
             dataCy(target: string): Chainable<Element>;
             cleanDB(target: string): Chainable<any>;
+            api (options: Partial<RequestOptions>, name?: string): Chainable<Response>
         }
     }
 }

@@ -1,12 +1,12 @@
 import {User} from './user.model';
-import {prop, Ref, getModelForClass} from "@typegoose/typegoose";
+import {prop, getModelForClass} from "@typegoose/typegoose";
 
-export class Artist{
-    @prop({ ref: User })
-    public user?: Ref<User>;
-    public name?: string;
-    public spotify_id?: string;
-    private rank?: number
+export class Artists {
+    @prop({_id: false })
+    public user?: User;
+
+    @prop()
+    public artists?: SpotifyApi.UsersTopArtistsResponse;
 }
 
-export const ArtistModel =  getModelForClass(Artist);
+export const ArtistsModel =  getModelForClass(Artists);

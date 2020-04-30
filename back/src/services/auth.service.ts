@@ -10,4 +10,8 @@ export const authCodeGrant = async(code: string): Promise<ISpotifyAuthToken> => 
     const data = await spotifyApi.authorizationCodeGrant(<string> code);
     return data.body
 }
-
+export const verifyAuth = async (access_token: string): Promise<any> => {
+    const spotifyApi = new SpotifyWebApi(credentials);
+    spotifyApi.setAccessToken(access_token);
+    return await spotifyApi.getMe();
+}
