@@ -8,7 +8,6 @@ import { WelcomePageRoutingModule } from './welcome-routing.module';
 
 import { WelcomePage } from './welcome.page';
 import {HeaderModule} from "../../components/header/header.module";
-import {FooterModule} from "../../components/footer/footer.module";
 
 @NgModule({
   imports: [
@@ -16,8 +15,7 @@ import {FooterModule} from "../../components/footer/footer.module";
     FormsModule,
     IonicModule,
     WelcomePageRoutingModule,
-      HeaderModule,
-      FooterModule
+      HeaderModule
   ],
   declarations: [WelcomePage]
 })

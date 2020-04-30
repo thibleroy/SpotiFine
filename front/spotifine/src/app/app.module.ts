@@ -11,11 +11,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {SpotifyConnectorService} from "../services/spotify-connector.service";
 import {SessionService} from "../services/session.service";
 import {AuthService} from "../services/auth.service";
+import {FooterModule} from "./components/footer/footer.module";
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FooterModule],
   providers: [
     StatusBar,
     SplashScreen,

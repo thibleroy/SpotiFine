@@ -9,7 +9,7 @@
       <ion-content>
         <ion-list id="inbox-list" lines="none">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of routes">
-            <ion-item routerDirection="root" button="true" [routerLink]="[p.path]" [class.active.item]="selectedPath.includes(p.path)"
+            <ion-item routerDirection="root" button="true" type="button" [routerLink]="[p.path]" [class.active.item]="selectedPath.includes(p.path)"
               [attr.data-cy]="p.data_cy">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.name }}</ion-label>
@@ -19,10 +19,11 @@
       </ion-content>
     </ion-menu>
 
-    <!-- content -->
-    <ion-content id="main-content">
-      <ion-router-outlet></ion-router-outlet>
-    </ion-content>
-    
+    <div class="ion-page" id="main-content">
+      <ion-content>
+        <ion-router-outlet></ion-router-outlet>
+      </ion-content>
+      <sf-footer></sf-footer>
+    </div>
   </ion-split-pane>
 </ion-app>
