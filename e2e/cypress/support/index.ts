@@ -1,4 +1,5 @@
 import './commands';
+import 'cypress-pipe'
 if (Cypress.env('TDD')) {
     import('cypress-watch-and-reload/support');
 }

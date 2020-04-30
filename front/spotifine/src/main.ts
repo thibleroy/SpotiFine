@@ -7,6 +7,11 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
-
+declare global {
+  interface Window {
+    Cypress: any;
+    app: any;
+  }
+}
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

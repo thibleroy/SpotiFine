@@ -13,5 +13,6 @@ export const identifiers = {
     me_btn: 'me_btn',
 
     // top_artists
-    artists_list: 'artists_list'
+    artists_list: 'artists_list',
+    side_menu: 'side_menu'
 }
