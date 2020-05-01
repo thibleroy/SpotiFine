@@ -8,8 +8,8 @@ export const routes: CustomRoutes = [
     path: 'welcome', data_cy: "welcome_route", name: "Welcome", icon: "star",
     loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomePageModule)
   },
-  { path: 'home', data_cy: "home_route", name: "Home", icon: "Home", 
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
+  { path: 'playlists', data_cy: "playlists_route", name: "Playlists", icon: "Home", 
+    loadChildren: () => import('./pages/playlists/playlists.module').then(m => m.PlaylistsPageModule) },
   {
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfilePageModule)

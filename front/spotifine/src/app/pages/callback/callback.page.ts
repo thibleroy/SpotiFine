@@ -17,7 +17,7 @@ export class CallbackPage implements OnInit {
   ngOnInit() {
     this.auth.getCallback(this.router.getCurrentNavigation().finalUrl.queryParams).subscribe(async(val) => {
       this.session.log_in(val.access_token, val.refresh_token);
-      await this.router.navigateByUrl('/home');
+      await this.router.navigateByUrl('/playlists');
     });
   }
 }

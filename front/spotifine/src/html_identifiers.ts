@@ -2,7 +2,7 @@ export const identifiers = {
 
     //side-menu
     header_side_menu_button : 'header_side_menu_button',
-    home_route: 'home_route',
+    playlists_route: 'playlists_route',
     welcome_route: 'welcome_route',
 
     email_input: 'emailinput',

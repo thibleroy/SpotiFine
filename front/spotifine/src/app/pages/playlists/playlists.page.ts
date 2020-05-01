@@ -4,11 +4,11 @@ import {SessionService} from "../../../services/session.service";
 import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
 import ListOfCurrentUsersPlaylistsResponse = SpotifyApi.ListOfCurrentUsersPlaylistsResponse;
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss']
+  selector: 'app-playlists',
+  templateUrl: 'playlists.page.html',
+  styleUrls: ['playlists.page.scss']
 })
-export class HomePage implements OnInit{
+export class PlaylistsPage implements OnInit{
     playlists: ListOfCurrentUsersPlaylistsResponse;
     playlists_loaded: boolean;
   constructor(private router: Router,

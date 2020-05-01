@@ -12,8 +12,8 @@ describe('> 992px', () => {
         cy.visit('/welcome');
     });
     it('changes routes', () => {
-        cy.dataCy(identifiers.home_route).click();
-        cy.location('pathname').should('contain', '/home');
+        cy.dataCy(identifiers.playlists_route).click();
+        cy.location('pathname').should('contain', '/playlists');
         cy.dataCy(identifiers.welcome_route).click();
         cy.location('pathname').should('contain', '/welcome');
     });

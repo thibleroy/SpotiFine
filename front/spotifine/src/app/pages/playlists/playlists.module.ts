@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { HomePage } from './home.page';
+import { PlaylistsPage } from './playlists.page';
 import {HeaderModule} from "../../components/header/header.module";
 import {PlaylistsModule} from "../../components/playlists/playlists.module";
 
@@ -15,13 +15,13 @@ import {PlaylistsModule} from "../../components/playlists/playlists.module";
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: PlaylistsPage
       }
     ]),
       HeaderModule,
       PlaylistsModule
   ],
   entryComponents: [],
-  declarations: [HomePage]
+  declarations: [PlaylistsPage]
 })
-export class HomePageModule {}
+export class PlaylistsPageModule {}

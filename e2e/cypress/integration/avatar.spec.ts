@@ -7,10 +7,10 @@ describe('avatar', () => {
         me().as('me');
         me_playlists().as('me/playlists');
         cy.login(token);
-        cy.visit('/home');
+        cy.visit('/playlists');
     });
-    it('current path should be home', () => {
-        cy.location('pathname').should('contain', '/home');
+    it('current path should be playlists', () => {
+        cy.location('pathname').should('contain', '/playlists');
     });
     it('show avatar even if no img in header', () => {
         cy.wait('@me');

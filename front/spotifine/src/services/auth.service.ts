@@ -9,9 +9,11 @@ import {ISpotifyToken} from "../../../../lib/interfaces/auth";
 })
 export class AuthService {
 
-    api = `https://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
-
-    constructor(private http: HttpClient) {}
+    _http : string = environment.PRODUCTION === "true" ? "https" : "http";
+    api = this._http + `://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
+    constructor(private http: HttpClient) {
+        console.log(this.api)
+    }
 
     getAuthorizeURL(state: string): Observable<string>{
         return this.http.get(`${this.api}/login`, {responseType: 'text', headers: {state: state}});
