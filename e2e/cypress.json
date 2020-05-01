@@ -1,11 +1,11 @@
 {
   "video": false,
-  "baseUrl": "https://localhost:12345",
+  "baseUrl": "https://localhost:12346",
   "supportFile": "cypress/support/index.ts",
   "pluginsFile": "cypress/plugins/index.ts",
   "env": {
     "SF_BACKEND_ADDR_DEV": "localhost",
-    "SF_BACKEND_PORT": 12345,
+    "SF_BACKEND_PORT": 12346,
     "SPOTIFY_USER_ID": "21mbb3q6kny2nttzek2dminqq",
     "TDD": true,
     "coverage": false

@@ -2,7 +2,7 @@ import { writeFile } from 'fs';
 // Configure Angular `environment.ts` file path
 const targetPath = './../../src/environments/environment.ts';
 // Load node modules
-import {env} from '../../../../lib/env'
+import env from '../../../../lib/env'
 // `environment.ts` file structure
 // const envConfigFile = `export const environment = {
 //    SF_BACKEND_ADDR_DEV: '${env.SF_BACKEND_ADDR_DEV}',

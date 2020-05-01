@@ -23,12 +23,4 @@ export class SpotifyConnectorService {
     await this.setTokenToSpotifyObject();
     return await this.spotifyApi.getUserPlaylists();
   }
-  async is_token_valid(): Promise<boolean> {
-    try {
-      await this.getAccount();
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
 }
