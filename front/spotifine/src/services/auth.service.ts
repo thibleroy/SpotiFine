@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Observable} from "rxjs";
-import {ISpotifyToken} from "../../../../lib/interfaces/auth";
 import {SessionService} from "./session.service";
 
 @Injectable({
@@ -10,8 +9,8 @@ import {SessionService} from "./session.service";
 })
 export class AuthService {
 
-    _http : string = environment.PRODUCTION === "true" ? "https" : "http";
-    api = this._http + `://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
+    api : string = environment.PRODUCTION ? `https://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_HTTPS_PORT}` : `http://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_HTTP_PORT}`;
+    //api = this._http + `://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_PORT}`;
 
     constructor(private http: HttpClient, private session: SessionService) {}
 
@@ -23,7 +22,7 @@ export class AuthService {
         return this.http.get<{access_token: string, refresh_token: string}>(`${this.api}/callback`, {headers: qP});
     }
 
-    refreshToken(refresh_token: string): Observable<ISpotifyToken>{
+    refreshToken(refresh_token: string): Observable<any>{
         return this.api_get('/token', {refresh_token: refresh_token});
     }
 
