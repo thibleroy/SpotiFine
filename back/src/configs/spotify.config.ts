@@ -1,7 +1,5 @@
-import {env} from '../../../lib/env';
-import {ISpotifyCredentials} from '../../../lib/interfaces/auth';
-
-export const credentials: ISpotifyCredentials  = {
+import env from '../../../lib/env';
+export const credentials  = {
         clientId: env.SPOTIFY_CLIENT_ID,
         clientSecret: env.SPOTIFY_CLIENT_SECRET,
         redirectUri: env.SPOTIFY_REDIRECT_URI

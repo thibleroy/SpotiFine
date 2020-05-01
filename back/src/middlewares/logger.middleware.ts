@@ -1,3 +1,3 @@
 import Morgan from 'morgan';
 
-export const loggerMiddleware = Morgan('dev')
+export default Morgan('dev')

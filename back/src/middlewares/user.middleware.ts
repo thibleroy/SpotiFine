@@ -1,7 +1,7 @@
 import {ErrorHandler} from "../utils/error.util";
 import {NextFunction, Request, Response} from "express";
 
-export const userMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+export default async (req: Request, res: Response, next: NextFunction) => {
     try {
         const spotifyId = req.query.spotifyId;
         if (spotifyId) {

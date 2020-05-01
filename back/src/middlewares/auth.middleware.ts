@@ -2,7 +2,7 @@ import {ErrorHandler} from "../utils/error.util";
 import {NextFunction, Request, Response} from "express";
 import {verifyAuth} from "../services/auth.service";
 
-export const authMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+export default async (req: Request, res: Response, next: NextFunction) => {
     try {
         const access_token = req.headers.access_token;
         console.log('AT', access_token);
