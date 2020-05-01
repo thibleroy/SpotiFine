@@ -13,15 +13,16 @@ import spotifineApi from './server'
 
 if(env.PRODUCTION) {
     connect_db('spotifine');
+    createHttpsServer({
+        key: readFileSync('../lib/https_credentials/server.key'),
+        cert: readFileSync('../lib/https_credentials/server.cert')
+    }, spotifineApi).listen(env.SF_BACKEND_HTTPS_PORT, () => {
+        console.log('Secured server listening port', env.SF_BACKEND_HTTPS_PORT)
+    });
 } else {
     connect_db('cypress');
 }
-createHttpsServer({
-    key: readFileSync('../lib/https_credentials/server.key'),
-    cert: readFileSync('../lib/https_credentials/server.cert')
-}, spotifineApi).listen(env.SF_BACKEND_HTTPS_PORT, () => {
-    console.log('Secured server listening port', env.SF_BACKEND_HTTPS_PORT)
-});
+
 createHttpServer(spotifineApi).listen(env.SF_BACKEND_HTTP_PORT, () => {
     console.log('Unsecured server listening port', env.SF_BACKEND_HTTP_PORT)
 });
