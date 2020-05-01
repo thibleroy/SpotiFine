@@ -30,9 +30,9 @@ export const get_methods = (route: string, methods: METHOD[]): Method[] => {
 export const verifyCode = (res: Cypress.Response, statusCode: number) => {
     expect(res.status).to.eq(statusCode);
 }
-export const verifyBody = (res: Cypress.Response, body: any, route: string) => {
+export const verifyBody = (res: Cypress.Response, body: any, dataName: string) => {
     const value = res.body.value;
-    expect(value[route]).to.deep.eq(body);
+    expect(value[dataName]).to.deep.eq(body);
 }
 export const cleanDB = (methods: Method[]) => {
     methods.filter((m) => m.name === 'GET')[0].method_().should((res) => {

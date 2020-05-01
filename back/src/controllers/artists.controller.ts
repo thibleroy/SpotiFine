@@ -53,7 +53,7 @@ export const artistsPutController = async (req: Request, res: Response, next: Ne
                     const updatedArtists = await putArtists(artists, <string>req.params.id);
                     if (updatedArtists) res.send({value: updatedArtists});
                     else throw new ErrorHandler(500, artistsErrors.DB_PROBLEM);
-                } else throw new ErrorHandler(400, artistsErrors.BAD_REQUEST_PARAMS)
+                } else throw new ErrorHandler(404, artistsErrors.NOT_FOUND)
             } else throw new ErrorHandler(409, artistsErrors.ALREADY_EXISTS);
         } else throw new ErrorHandler(400, artistsErrors.BAD_REQUEST_BODY);
     } catch (e) {

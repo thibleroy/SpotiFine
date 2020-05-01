@@ -5,5 +5,6 @@ export interface Method {
 }
 export interface ApiRoute {
     route: string;
-    methods: Method[]
+    methods: Method[];
+    dataName: string;
 }

@@ -49,7 +49,7 @@ export const playlistPutController = async (req: Request, res: Response, next: N
                     const updatedArtists = await putPlaylist(artists, <string>req.params.id);
                     if (updatedArtists) res.send({value: updatedArtists});
                     else throw new ErrorHandler(500, playlistErrors.DB_PROBLEM);
-                } else throw new ErrorHandler(409, playlistErrors.ALREADY_EXISTS);
+                } else throw new ErrorHandler(404, playlistErrors.NOT_FOUND);
             } else throw new ErrorHandler(400, playlistErrors.BAD_REQUEST_PARAMS);
         } else throw new ErrorHandler(400, playlistErrors.BAD_REQUEST_BODY);
     } catch (e) {
