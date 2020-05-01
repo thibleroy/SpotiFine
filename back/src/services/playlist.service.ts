@@ -4,6 +4,10 @@ import {User} from "../models/user.model";
 export const getPlaylist = async(id: string): Promise<Playlist|null>  => {
     return PlaylistModel.findOne({_id: id});
 }
+
+export const getPlaylists = async(spotifyId: string): Promise<Playlist[]|null> => {
+    return PlaylistModel.find({'user.spotifyId': spotifyId});
+}
 export const postPlaylist = async(playlist: SpotifyApi.PlaylistObjectFull, spotifyId: string): Promise<Playlist|null>  => {
     const user: User = {spotifyId: spotifyId};
     const newPlaylist: Playlist = {user: user, playlist: playlist};

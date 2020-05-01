@@ -1,9 +1,9 @@
 import {METHOD, Method} from "./interfaces";
-const at = 'BQA3sBywaM8P9T9AgVcKiU9YAFseqpHdeQFItxnVm_RC9nGIvuRwL3gMIyK6fW2kBChM5seUVdx91Mz57hWQoXVhZ96vPQucOcfoxhFYulpL7WZ2exyPc0gJys24HmlxUDPkDUmMyt6S9KaBUKPLLxrpVT8jBp8eXOj9NOhTOuiVI3qni71CLw'
-const method_factory = (name: string, route: string, json?: any) => {
-    return () => {
+const at = 'BQCRWL5ruKGLe7XavepsPYMzDPkhV2GAgGEDRKQJ9zE1PBgbovaxxnXmY5H7a8AOwCZbdU13qnEUcW7jXUYuPAPycsFOKBXXnqXhcwFvNgSvOpHgRo12IDrovwwUxpQ-hVRjdDnBT9fPvsOC2kcmwYO7voQr_yZmuCF9UNizzRJ3aO9FArILVQ'
+const method_factory = (name: string, route: string) => {
+    return (id: string = '', body: string = '') => {
             return cy.request({
-                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}/zzzzzzzzzzzz`,
+                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}/${id}`,
                 qs: {
                     spotifyId: Cypress.env('SPOTIFY_USER_ID')
                 },
@@ -12,17 +12,17 @@ const method_factory = (name: string, route: string, json?: any) => {
                 headers: {
                     access_token: at
                 },
-                body: json
+                body: body
             });
     }
 }
 
-export const get_methods = (route: string, methods: METHOD[], json?: any): Method[] => {
+export const get_methods = (route: string, methods: METHOD[]): Method[] => {
     let res = [];
     methods.forEach((m) => {
         res.push({
             name: m,
-            method_: method_factory(m, route, json)
+            method_: method_factory(m, route)
         });
     })
     return res;
@@ -33,4 +33,19 @@ export const verifyCode = (res: Cypress.Response, statusCode: number) => {
 export const verifyBody = (res: Cypress.Response, body: any, route: string) => {
     const value = res.body.value;
     expect(value[route]).to.deep.eq(body);
+}
+export const cleanDB = (methods: Method[]) => {
+    methods.filter((m) => m.name === 'GET')[0].method_().should((res) => {
+        if (res.status !== 404) {
+            const value = res.body.value
+            if (Array.isArray(value)) {
+                value.forEach((val) => {
+                    methods.filter((m) => m.name === 'DELETE')[0].method_(val._id);
+                });
+            }
+            else {
+                methods.filter((m) => m.name === 'DELETE')[0].method_(value._id);
+            }
+        }
+    });
 }
