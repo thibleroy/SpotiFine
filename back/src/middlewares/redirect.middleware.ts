@@ -1,7 +1,9 @@
 import {NextFunction, Request, Response} from "express";
 
 export default async (req: Request, res: Response, next: NextFunction) => {
+    console.log('hey');
     if (!req.secure) {
-        res.redirect(`https://${req.headers.host}/`)
-    } else return next();
+        return res.redirect(['https://', req.headers.host, req.baseUrl].join(''));
+    }
+    next();
 }
