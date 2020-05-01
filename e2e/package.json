@@ -6,6 +6,7 @@
     "test:dashboard": "node_modules/.bin/cypress open"
   },
   "devDependencies": {
+    "@bahmutov/cy-api": "^1.4.2",
     "@cypress/code-coverage": "^3.5.4",
     "cypress": "^4.4.1",
     "cypress-pipe": "^1.7.0",

@@ -1,39 +1,28 @@
-import {env} from '../../lib/env'
-import fs from 'fs'
-import express from 'express';
-import bp from 'body-parser';
-import {loggerMiddleware} from './middlewares/logger.middleware'
-import {set_headers} from './middlewares/headers.middleware'
-import {routers} from './routes/index.route';
-import {error_handler, } from "./middlewares/errors.middleware";
-import https from 'https';
+import env from '../../lib/env'
+import  {readFileSync} from 'fs'
+import {createServer as createHttpsServer} from 'https';
+import {createServer as createHttpServer} from 'http';
+
 import {connect_db} from "./utils/mongo.util";
 
-const app = express();
-app.use(set_headers);
-app.use(loggerMiddleware);
-app.use(bp.json());
+import spotifineApi from './server'
 
-routers.forEach((router) => {
-    app.use(router.route, router.router);
-});
+/**
+ * Use configuration depending on environment mode
+ */
 
-app.use(error_handler);
-if(env.PRODUCTION === 'true') {
+if(env.PRODUCTION) {
     connect_db('spotifine');
+    createHttpsServer({
+        key: readFileSync('../lib/https_credentials/server.key'),
+        cert: readFileSync('../lib/https_credentials/server.cert')
+    }, spotifineApi).listen(env.SF_BACKEND_HTTPS_PORT, () => {
+        console.log('Secured server listening port', env.SF_BACKEND_HTTPS_PORT)
+    });
 } else {
     connect_db('cypress');
 }
 
-const port = env.SF_BACKEND_PORT || 12345;
-
-const server = https.createServer({
-    key: fs.readFileSync('../lib/https_credentials/server.key', 'utf8'),
-    cert: fs.readFileSync('../lib/https_credentials/server.cert', 'utf8')
-}, app);
-
-server.listen(port, () => {
-  console.log("server starting on port : " + port)
+createHttpServer(spotifineApi).listen(env.SF_BACKEND_HTTP_PORT, () => {
+    console.log('Unsecured server listening port', env.SF_BACKEND_HTTP_PORT)
 });
-
-export default app;

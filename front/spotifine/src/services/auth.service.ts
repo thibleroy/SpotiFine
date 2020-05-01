@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Observable} from "rxjs";
 import {ISpotifyToken} from "../../../../lib/interfaces/auth";
+import {SessionService} from "./session.service";
 
 @Injectable({
     providedIn: 'root'
@@ -11,9 +12,8 @@ export class AuthService {
 
     _http : string = environment.PRODUCTION === "true" ? "https" : "http";
     api = this._http + `://${environment.SF_BACKEND_ADDR_DEV}:${environment.SF_BACKEND_PORT}`;
-    constructor(private http: HttpClient) {
-        console.log(this.api)
-    }
+
+    constructor(private http: HttpClient, private session: SessionService) {}
 
     getAuthorizeURL(state: string): Observable<string>{
         return this.http.get(`${this.api}/login`, {responseType: 'text', headers: {state: state}});
@@ -28,7 +28,7 @@ export class AuthService {
     }
 
     api_get(path: string, headers?: any): Observable<any> {
-        return this.http.get(this.api + path, {headers: {... headers}})
+        return this.http.get(this.api + path, {headers: {... headers, access_token: this.session.get_access_token()}});
     }
 
 }

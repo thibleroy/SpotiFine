@@ -6,8 +6,11 @@
   "env": {
     "SF_BACKEND_ADDR_DEV": "localhost",
     "SF_BACKEND_PORT": 12345,
-    "SPOTIFY_USER_ID": "cypress_spotify_user_id",
-    "TDD": false,
+    "SPOTIFY_USER_ID": "21mbb3q6kny2nttzek2dminqq",
+    "TDD": true,
     "coverage": false
+  },
+  "cypress-watch-and-reload": {
+    "watch": "back/*"
   }
 }

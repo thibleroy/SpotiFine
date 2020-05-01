@@ -1,5 +1,4 @@
-import {env} from "../../../lib/env";
-
+import env from "../../../lib/env";
 
 export const mongodb_config  = {
         url: env.MONGODB_URI,
