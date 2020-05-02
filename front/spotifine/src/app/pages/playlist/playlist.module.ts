@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PlaylistPageRoutingModule } from './playlist-routing.module';
 
 import { PlaylistPage } from './playlist.page';
+import {TrackModule} from "../../components/track/track.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PlaylistPageRoutingModule
+    PlaylistPageRoutingModule,
+      TrackModule
   ],
   declarations: [PlaylistPage]
 })

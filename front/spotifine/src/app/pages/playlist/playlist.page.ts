@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
 
 @Component({
   selector: 'app-playlist',
@@ -7,16 +8,24 @@ import {Router} from "@angular/router";
   styleUrls: ['./playlist.page.scss'],
 })
 export class PlaylistPage implements OnInit {
+  playlist: SpotifyApi.PlaylistObjectFull;
+  loaded: boolean;
+  constructor(private router: Router, private spotifyConnectorService: SpotifyConnectorService) { }
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-
+  async ngOnInit() {
+    this.loaded = false;
+    await this.getPlaylist();
   }
 
-  getPlaylist() {
-    const id = this.router.url;
-    console.log('id', id);
+  async getPlaylist() {
+    const id = this.router.url.split('/playlist/')[1];
+    try {
+      this.playlist = await this.spotifyConnectorService.getPlaylist(id);
+      this.loaded = true;
+      console.log('p', this.playlist)
+    } catch(e) {
+      alert('error');
+    }
   }
 
 }

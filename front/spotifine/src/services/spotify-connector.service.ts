@@ -54,9 +54,13 @@ export class SpotifyConnectorService {
         return options != undefined ? await fun(options) : await fun()
       }
       catch (e) {
-        this.session.log_out();
+        await this.session.log_out();
         return null;
       }
     }
+  }
+
+  async getPlaylist(id: string): Promise<SpotifyApi.PlaylistObjectFull> {
+    return this.spotifyApiRequest(this.spotifyApi.getPlaylist, id);
   }
 }

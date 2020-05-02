@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card href="/playlist/{{playlist.id}}">
   <ion-card-content>
     <ion-item lines="none">
       <ion-thumbnail slot="start">
@@ -10,13 +10,13 @@
         </ng-template>
       </ion-thumbnail>
       <ion-label>
-      <h1 class="sf_general_title ion-text-left">
-        {{playlist.name}}
-      </h1>
-      <p class="sf_text">
-        {{playlist.owner.display_name}}
-      </p>
-        </ion-label>
+        <h1 class="sf_general_title ion-text-left">
+          {{playlist.name}}
+        </h1>
+        <p class="sf_text">
+          {{playlist.owner.display_name}}
+        </p>
+      </ion-label>
     </ion-item>
   </ion-card-content>
 </ion-card>

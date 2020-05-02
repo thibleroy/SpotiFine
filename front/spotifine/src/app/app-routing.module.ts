@@ -18,11 +18,15 @@ export const routes: CustomRoutes = [
     path: 'callback',
     loadChildren: () => import('./pages/callback/callback.module').then(m => m.CallbackPageModule)
   },
-  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
   {
-    path: 'playlist',
+    path: 'artists', data_cy: "artists_route", name: "My Top Artists", icon: "star",
+    loadChildren: () => import('./pages/artists/artists.module').then( m => m.ArtistsPageModule)
+  },
+  {
+    path: 'playlist/:id',
     loadChildren: () => import('./pages/playlist/playlist.module').then( m => m.PlaylistPageModule)
-  }
+  },
+  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
 ];
 
 

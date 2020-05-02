@@ -1,0 +1,23 @@
+<ion-item>
+  <ion-thumbnail slot="start">
+    <div *ngIf="track.album.images.length>0; else no_img">
+      <ion-img src="{{track.album.images[0].url}}"></ion-img>
+    </div>
+    <ng-template #no_img>
+      <ion-img src="./../../assets/icon/playlist.svg"></ion-img>
+    </ng-template>
+  </ion-thumbnail>
+  <ion-label>
+    <h1 class="sf_section_title">
+      {{track.name}}
+    </h1>
+    <p class="sf_title">
+      {{track.artists[0].name}}
+    </p>
+  </ion-label>
+  <ion-buttons>
+    <ion-button slot="end">
+      <ion-icon class="sf_icons" name="play"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>
