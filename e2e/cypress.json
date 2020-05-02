@@ -1,6 +1,6 @@
 {
   "video": false,
-  "baseUrl": "https://localhost:12346",
+  "baseUrl": "http://localhost:8100",
   "supportFile": "cypress/support/index.ts",
   "pluginsFile": "cypress/plugins/index.ts",
   "env": {

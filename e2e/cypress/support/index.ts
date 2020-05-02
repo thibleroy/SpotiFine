@@ -1,6 +1,6 @@
 import './commands';
+import 'cypress-pipe'
 import('@bahmutov/cy-api/support');
-
 if (Cypress.env('TDD')) {
     import('cypress-watch-and-reload/support');
 }
@@ -16,6 +16,7 @@ declare global {
              * @example cy.dataCy('greeting')
              */
             login(access_token: string): Chainable<any>;
+            logout(): Chainable<any>
             dataCy(target: string): Chainable<Element>;
             cleanDB(target: string): Chainable<any>;
             api (options: Partial<RequestOptions>, name?: string): Chainable<Response>

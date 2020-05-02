@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {SessionService} from "../../../services/session.service";
-import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
-import {randomString} from "../../../utils";
-import {AuthService} from "../../../services/auth.service";
-import {Router} from "@angular/router";
+import { Component, OnInit, HostListener } from '@angular/core';
+import { SessionService } from "../../../services/session.service";
+import { Store, select } from '@ngrx/store';
+import { ApplicationState } from '../../../store/application_state/application_state.reducer'
+import { SpotifyConnectorService } from "../../../services/spotify-connector.service";
+import { randomString } from "../../../utils";
+import { AuthService } from "../../../services/auth.service";
+import { Router } from "@angular/router";
+import { identifiers } from '../../../html_identifiers'
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'sf-header',
@@ -11,34 +16,34 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  loaded: boolean;
+  currentWindowWidth: Number;
   account: SpotifyApi.CurrentUsersProfileResponse;
+  identifiers = identifiers;
+  applicationState$: Observable<ApplicationState>;
+  isLoaded = false;
+  isLoggedIn: boolean = false;
+
   constructor(public session: SessionService,
-              public spotify: SpotifyConnectorService,
-              private auth: AuthService,
-              private router: Router) { }
+    public spotify: SpotifyConnectorService,
+    private auth: AuthService,
+    private router: Router,
+    private store: Store<{ applicationState: ApplicationState }>) {
+    this.currentWindowWidth = window.innerWidth
+    this.applicationState$ = store.pipe(select('applicationState'));
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.currentWindowWidth = window.innerWidth
+  }
 
   async ngOnInit() {
-    this.loaded = false;
-    if (this.session.isAuth()) {
-        try {
-          this.account = await this.spotify.getAccount();
-          this.loaded = true;
-        } catch (e) {
-          this.auth.refreshToken(this.session.get_refresh_token());
-          this.account = await this.spotify.getAccount();
-          this.loaded = true;
-        } finally {
-          if (!this.loaded) {
-            await this.session.log_out();
-          }
-        }
-    } else {
-      console.log('hey', this.router.url);
-      if (this.router.url !== '/welcome') {
-        await this.router.navigateByUrl('/welcome');
-      }
-    }
+
+    this.applicationState$.subscribe(async (appState: ApplicationState) => {
+      this.isLoggedIn = appState.isLoggedIn;
+      this.account = appState.account;
+      this.isLoaded = appState.isLoaded;
+    })
   }
 
   authorize() {

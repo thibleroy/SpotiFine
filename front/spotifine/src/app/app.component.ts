@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router, RouterEvent } from '@angular/router';
+import { routes } from './app-routing.module'
+import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
+import { identifiers } from "../html_identifiers";
+import { Store, select } from '@ngrx/store';
+import { ApplicationState } from './../store/application_state/application_state.reducer'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,17 +16,39 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  identifiers = identifiers;
+  routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined && route.data_cy != undefined && route.icon != undefined);
+  applicationState$: Observable<ApplicationState>;
+  isLoggedIn$: boolean = false;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private router: Router,
+    private store: Store<{ applicationState: ApplicationState }>
   ) {
+    this.applicationState$ = store.pipe(select('applicationState'));
+
+    this.applicationState$.subscribe((appState: ApplicationState) => {
+      this.isLoggedIn$ = appState.isLoggedIn
+    })
+    this.router.events.subscribe((event: RouterEvent) => {
+      if (event.url != undefined) {
+        this.selectedPath = event.url;
+      }
+    });
+
+    if (window.Cypress) {
+      console.log('under test');
+    }
     this.initializeApp();
   }
 
+  selectedPath: string = '';
+
   initializeApp() {
     this.platform.ready().then(() => {
-      if (this.platform.is('cordova')){
+      if (this.platform.is('cordova')) {
         this.statusBar.styleDefault();
         this.splashScreen.hide();
       }
