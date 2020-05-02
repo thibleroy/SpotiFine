@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   applicationState$: Observable<ApplicationState>;
   isLoaded = false;
   isLoggedIn: boolean = false;
-  
+
   constructor(public session: SessionService,
     public spotify: SpotifyConnectorService,
     private auth: AuthService,
@@ -41,13 +41,8 @@ export class HeaderComponent implements OnInit {
 
     this.applicationState$.subscribe(async (appState: ApplicationState) => {
       this.isLoggedIn = appState.isLoggedIn;
-      if (appState.isLoaded == true && this.isLoaded == false) {
-        this.isLoaded = true;
-        this.account = appState.account;
-      }
-      else if (appState.isLoaded == false){
-        this.isLoaded = false;
-      }
+      this.account = appState.account;
+      this.isLoaded = appState.isLoaded;
     })
   }
 

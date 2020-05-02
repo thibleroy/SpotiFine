@@ -1,5 +1,5 @@
 <ion-app>
-  <div *ngIf="isLoggedIn">
+  <div *ngIf="isLoggedIn$;else isLoggedOut">
     <ion-split-pane contentId="main-content" when="lg">
       <ion-menu [attr.data-cy]="identifiers.side_menu" contentId="main-content" side="start" menuId="first">
         <ion-header >
@@ -29,12 +29,14 @@
       </div>
     </ion-split-pane>
   </div>
-  <div *ngIf="!isLoggedIn" class="ion-page">
+  <ng-template #isLoggedOut >
+  <div class="ion-page">
     <sf-header></sf-header>
     <ion-content>
       <ion-router-outlet></ion-router-outlet>
     </ion-content>
     <sf-footer></sf-footer>
   </div>
+  </ng-template>
   
 </ion-app>
