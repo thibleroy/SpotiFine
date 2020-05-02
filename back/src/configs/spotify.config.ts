@@ -4,4 +4,4 @@ export const credentials  = {
         clientSecret: env.SPOTIFY_CLIENT_SECRET,
         redirectUri: env.SPOTIFY_REDIRECT_URI
     },
-    scopes = ['user-read-private', 'user-read-email', 'user-top-read'];
+    scopes = ['user-top-read','user-read-private', 'user-read-email'];
