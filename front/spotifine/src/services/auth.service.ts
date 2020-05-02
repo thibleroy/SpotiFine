@@ -10,7 +10,6 @@ import {SessionService} from "./session.service";
 export class AuthService {
 
     api : string = environment.PRODUCTION ? `https://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_HTTPS_PORT}` : `http://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_HTTP_PORT}`;
-    //api = this._http + `://${environment.SF_BACKEND_ADDR}:${environment.SF_BACKEND_PORT}`;
 
     constructor(private http: HttpClient, private session: SessionService) {}
 

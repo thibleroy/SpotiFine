@@ -1,10 +1,9 @@
 import {METHOD, Method} from "./interfaces";
-import {Artists} from "../../../back/src/models/artists.model";
-const at = 'BQCdMV6Yui7zMmPCZ241g5Y2UZ1WkG5-de3l2uIb6riF3j6Vz-JJLaLZj6mLTdK2p53jfpm3lolDLKOkUv7pAZgvHE-vDk7axDsAWll3erjbzmjB0jfOU-3GLNlrddrOHUAcx3ndDDovdFbtwXqrToXopcf9knf6kRxtsYcUAVDOVTsw7mw5ww'
+const at = 'BQA3sBywaM8P9T9AgVcKiU9YAFseqpHdeQFItxnVm_RC9nGIvuRwL3gMIyK6fW2kBChM5seUVdx91Mz57hWQoXVhZ96vPQucOcfoxhFYulpL7WZ2exyPc0gJys24HmlxUDPkDUmMyt6S9KaBUKPLLxrpVT8jBp8eXOj9NOhTOuiVI3qni71CLw'
 const method_factory = (name: string, route: string, json?: any) => {
     return () => {
             return cy.request({
-                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}`,
+                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}/zzzzzzzzzzzz`,
                 qs: {
                     spotifyId: Cypress.env('SPOTIFY_USER_ID')
                 },

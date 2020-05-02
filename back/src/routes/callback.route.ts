@@ -1,8 +1,8 @@
 import {Router} from "express";
-import {callback_controller} from "../controllers/callback.controller";
+import {callbackController} from "../controllers/callback.controller";
 
 const router = Router();
 
-router.get('/', callback_controller);
+router.get('/', callbackController);
 
 export default {route: '/callback', router: router};

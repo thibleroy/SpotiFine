@@ -1,2 +1,2 @@
 import {test_route} from "../../restful/test_factory";
-test_route('user');
+test_route('playlist');

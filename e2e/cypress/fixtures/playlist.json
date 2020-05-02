@@ -1,0 +1,2708 @@
+{
+  "collaborative": false,
+  "description": "",
+  "external_urls": {
+    "spotify": "https://open.spotify.com/playlist/35ItlrwpednFpZjJ8ThZou"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/playlists/35ItlrwpednFpZjJ8ThZou",
+  "id": "35ItlrwpednFpZjJ8ThZou",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://mosaic.scdn.co/640/ab67616d0000b27361d7d7dc1cec3382e6ef1fb3ab67616d0000b2736203ee735571f8706e47ce1aab67616d0000b27390cef4228c60a50849e94697ab67616d0000b273d5f4f2b6b7f65cf826952087",
+      "width": 640
+    },
+    {
+      "height": 300,
+      "url": "https://mosaic.scdn.co/300/ab67616d0000b27361d7d7dc1cec3382e6ef1fb3ab67616d0000b2736203ee735571f8706e47ce1aab67616d0000b27390cef4228c60a50849e94697ab67616d0000b273d5f4f2b6b7f65cf826952087",
+      "width": 300
+    },
+    {
+      "height": 60,
+      "url": "https://mosaic.scdn.co/60/ab67616d0000b27361d7d7dc1cec3382e6ef1fb3ab67616d0000b2736203ee735571f8706e47ce1aab67616d0000b27390cef4228c60a50849e94697ab67616d0000b273d5f4f2b6b7f65cf826952087",
+      "width": 60
+    }
+  ],
+  "name": "PAR",
+  "owner": {
+    "display_name": "Thibault Leroy",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+    },
+    "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+    "id": "21mbb3q6kny2nttzek2dminqq",
+    "type": "user",
+    "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+  },
+  "primary_color": null,
+  "public": true,
+  "snapshot_id": "MTksNmRmZWI1NWU3MzlmNjk3YjQ2YWUxMDIwYTg4NzVkNDlkNmRlOWJiNw==",
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/35ItlrwpednFpZjJ8ThZou/tracks?offset=0&limit=100",
+    "items": [
+      {
+        "added_at": "2018-03-17T16:17:19Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+                },
+                "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+                "id": "1Yfe3ONJlioHys7jwHdfVm",
+                "name": "Lomepal",
+                "type": "artist",
+                "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+              }
+            ],
+            "available_markets": [
+              "AD",
+              "AE",
+              "AR",
+              "AT",
+              "AU",
+              "BE",
+              "BG",
+              "BH",
+              "BO",
+              "BR",
+              "CA",
+              "CH",
+              "CL",
+              "CO",
+              "CR",
+              "CY",
+              "CZ",
+              "DE",
+              "DK",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ES",
+              "FI",
+              "FR",
+              "GB",
+              "GR",
+              "GT",
+              "HK",
+              "HN",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IS",
+              "IT",
+              "JO",
+              "JP",
+              "KW",
+              "LB",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MA",
+              "MC",
+              "MT",
+              "MX",
+              "MY",
+              "NI",
+              "NL",
+              "NO",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PH",
+              "PL",
+              "PS",
+              "PT",
+              "PY",
+              "QA",
+              "RO",
+              "SA",
+              "SE",
+              "SG",
+              "SK",
+              "SV",
+              "TH",
+              "TN",
+              "TR",
+              "TW",
+              "US",
+              "UY",
+              "VN",
+              "ZA"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/7C809pDAlv4nolQo5DnkXI"
+            },
+            "href": "https://api.spotify.com/v1/albums/7C809pDAlv4nolQo5DnkXI",
+            "id": "7C809pDAlv4nolQo5DnkXI",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27390cef4228c60a50849e94697",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0290cef4228c60a50849e94697",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485190cef4228c60a50849e94697",
+                "width": 64
+              }
+            ],
+            "name": "FLIP (Deluxe)",
+            "release_date": "2017-12-01",
+            "release_date_precision": "day",
+            "total_tracks": 27,
+            "type": "album",
+            "uri": "spotify:album:7C809pDAlv4nolQo5DnkXI"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+              "id": "1Yfe3ONJlioHys7jwHdfVm",
+              "name": "Lomepal",
+              "type": "artist",
+              "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "disc_number": 1,
+          "duration_ms": 484760,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "FR9W11709429"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/71Q2DgtNyUsZ7Ows89szi2"
+          },
+          "href": "https://api.spotify.com/v1/tracks/71Q2DgtNyUsZ7Ows89szi2",
+          "id": "71Q2DgtNyUsZ7Ows89szi2",
+          "is_local": false,
+          "name": "Billet",
+          "popularity": 43,
+          "preview_url": "https://p.scdn.co/mp3-preview/b764f690dbf1a9bef74ce6f89c2446d341cda10f?cid=774b29d4f13844c495f206cafdad9c86",
+          "track": true,
+          "track_number": 14,
+          "type": "track",
+          "uri": "spotify:track:71Q2DgtNyUsZ7Ows89szi2"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:17:24Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5wH58LQ6x7glKH72cIVJtN"
+              },
+              "href": "https://api.spotify.com/v1/artists/5wH58LQ6x7glKH72cIVJtN",
+              "id": "5wH58LQ6x7glKH72cIVJtN",
+              "name": "VYNK",
+              "type": "artist",
+              "uri": "spotify:artist:5wH58LQ6x7glKH72cIVJtN"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 2,
+          "duration_ms": 188133,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BE5EO1800003"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6cfHjCMFEhFMO9Pus8pPNL"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6cfHjCMFEhFMO9Pus8pPNL",
+          "id": "6cfHjCMFEhFMO9Pus8pPNL",
+          "is_local": false,
+          "name": "Dessert",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 3,
+          "type": "track",
+          "uri": "spotify:track:6cfHjCMFEhFMO9Pus8pPNL"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:17:31Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+                },
+                "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+                "id": "1Yfe3ONJlioHys7jwHdfVm",
+                "name": "Lomepal",
+                "type": "artist",
+                "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/7LoX9WKWcD5p8FoSvs7HyH"
+            },
+            "href": "https://api.spotify.com/v1/albums/7LoX9WKWcD5p8FoSvs7HyH",
+            "id": "7LoX9WKWcD5p8FoSvs7HyH",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27337a3525fac80af775795ac08",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0237a3525fac80af775795ac08",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485137a3525fac80af775795ac08",
+                "width": 64
+              }
+            ],
+            "name": "FLIP",
+            "release_date": "2017-06-30",
+            "release_date_precision": "day",
+            "total_tracks": 15,
+            "type": "album",
+            "uri": "spotify:album:7LoX9WKWcD5p8FoSvs7HyH"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+              "id": "1Yfe3ONJlioHys7jwHdfVm",
+              "name": "Lomepal",
+              "type": "artist",
+              "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 212586,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "FR9W11709425"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1uaAq8pSghvpVxlrOrgdeO"
+          },
+          "href": "https://api.spotify.com/v1/tracks/1uaAq8pSghvpVxlrOrgdeO",
+          "id": "1uaAq8pSghvpVxlrOrgdeO",
+          "is_local": false,
+          "name": "Yeux disent",
+          "popularity": 1,
+          "preview_url": null,
+          "track": true,
+          "track_number": 9,
+          "type": "track",
+          "uri": "spotify:track:1uaAq8pSghvpVxlrOrgdeO"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:17:50Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 191543,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700003"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/49tS8lIjcPyUYEuElaJiIt"
+          },
+          "href": "https://api.spotify.com/v1/tracks/49tS8lIjcPyUYEuElaJiIt",
+          "id": "49tS8lIjcPyUYEuElaJiIt",
+          "is_local": false,
+          "name": "Diable",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 3,
+          "type": "track",
+          "uri": "spotify:track:49tS8lIjcPyUYEuElaJiIt"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:17:56Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 212816,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700009"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1oRDOHOjCb1yCkKXO5BBC2"
+          },
+          "href": "https://api.spotify.com/v1/tracks/1oRDOHOjCb1yCkKXO5BBC2",
+          "id": "1oRDOHOjCb1yCkKXO5BBC2",
+          "is_local": false,
+          "name": "Lenita",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 9,
+          "type": "track",
+          "uri": "spotify:track:1oRDOHOjCb1yCkKXO5BBC2"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:18:06Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 180126,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700012"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3VcGBeU9QCUkxWHLGLETb7"
+          },
+          "href": "https://api.spotify.com/v1/tracks/3VcGBeU9QCUkxWHLGLETb7",
+          "id": "3VcGBeU9QCUkxWHLGLETb7",
+          "is_local": false,
+          "name": "Sabena",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 12,
+          "type": "track",
+          "uri": "spotify:track:3VcGBeU9QCUkxWHLGLETb7"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:18:11Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 241798,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700013"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0PYmghWDIFdqoOvgeN4LM4"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0PYmghWDIFdqoOvgeN4LM4",
+          "id": "0PYmghWDIFdqoOvgeN4LM4",
+          "is_local": false,
+          "name": "Ma tête",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 13,
+          "type": "track",
+          "uri": "spotify:track:0PYmghWDIFdqoOvgeN4LM4"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-17T16:18:17Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 2,
+          "duration_ms": 222133,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BE5EO1800006"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6d866HZjrYeAlYaoQZlNUR"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6d866HZjrYeAlYaoQZlNUR",
+          "id": "6d866HZjrYeAlYaoQZlNUR",
+          "is_local": false,
+          "name": "Pogo",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 6,
+          "type": "track",
+          "uri": "spotify:track:6d866HZjrYeAlYaoQZlNUR"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-19T22:03:47Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+                },
+                "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+                "id": "1mMUzAMrNqoTHgtxA0dZi6",
+                "name": "Caballero & JeanJass",
+                "type": "artist",
+                "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/2fi76HkoEb1Y9INTfPFYSp"
+            },
+            "href": "https://api.spotify.com/v1/albums/2fi76HkoEb1Y9INTfPFYSp",
+            "id": "2fi76HkoEb1Y9INTfPFYSp",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273af038d0ba2a856e7debf1b1f",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02af038d0ba2a856e7debf1b1f",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851af038d0ba2a856e7debf1b1f",
+                "width": 64
+              }
+            ],
+            "name": "Double Hélice 2",
+            "release_date": "2017-05-12",
+            "release_date_precision": "day",
+            "total_tracks": 16,
+            "type": "album",
+            "uri": "spotify:album:2fi76HkoEb1Y9INTfPFYSp"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+              },
+              "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+              "id": "1mMUzAMrNqoTHgtxA0dZi6",
+              "name": "Caballero & JeanJass",
+              "type": "artist",
+              "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 234022,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO71700007"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5y0TYe5ArxXxgWp9ZgTybD"
+          },
+          "href": "https://api.spotify.com/v1/tracks/5y0TYe5ArxXxgWp9ZgTybD",
+          "id": "5y0TYe5ArxXxgWp9ZgTybD",
+          "is_local": false,
+          "name": "La base",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 6,
+          "type": "track",
+          "uri": "spotify:track:5y0TYe5ArxXxgWp9ZgTybD"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-03-22T06:15:08Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+                },
+                "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+                "id": "1Yfe3ONJlioHys7jwHdfVm",
+                "name": "Lomepal",
+                "type": "artist",
+                "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+              }
+            ],
+            "available_markets": [
+              "AD",
+              "AE",
+              "AR",
+              "AT",
+              "AU",
+              "BE",
+              "BG",
+              "BH",
+              "BO",
+              "BR",
+              "CA",
+              "CH",
+              "CL",
+              "CO",
+              "CR",
+              "CY",
+              "CZ",
+              "DE",
+              "DK",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ES",
+              "FI",
+              "FR",
+              "GB",
+              "GR",
+              "GT",
+              "HK",
+              "HN",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IS",
+              "IT",
+              "JO",
+              "JP",
+              "KW",
+              "LB",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MA",
+              "MC",
+              "MT",
+              "MX",
+              "MY",
+              "NI",
+              "NL",
+              "NO",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PH",
+              "PL",
+              "PS",
+              "PT",
+              "PY",
+              "QA",
+              "RO",
+              "SA",
+              "SE",
+              "SG",
+              "SK",
+              "SV",
+              "TH",
+              "TN",
+              "TR",
+              "TW",
+              "US",
+              "UY",
+              "VN",
+              "ZA"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/7C809pDAlv4nolQo5DnkXI"
+            },
+            "href": "https://api.spotify.com/v1/albums/7C809pDAlv4nolQo5DnkXI",
+            "id": "7C809pDAlv4nolQo5DnkXI",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27390cef4228c60a50849e94697",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0290cef4228c60a50849e94697",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485190cef4228c60a50849e94697",
+                "width": 64
+              }
+            ],
+            "name": "FLIP (Deluxe)",
+            "release_date": "2017-12-01",
+            "release_date_precision": "day",
+            "total_tracks": 27,
+            "type": "album",
+            "uri": "spotify:album:7C809pDAlv4nolQo5DnkXI"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+              "id": "1Yfe3ONJlioHys7jwHdfVm",
+              "name": "Lomepal",
+              "type": "artist",
+              "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "disc_number": 2,
+          "duration_ms": 250440,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "FR9W11721053"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/35KAT6TuJKhKM8Fi6XpObd"
+          },
+          "href": "https://api.spotify.com/v1/tracks/35KAT6TuJKhKM8Fi6XpObd",
+          "id": "35KAT6TuJKhKM8Fi6XpObd",
+          "is_local": false,
+          "name": "Club",
+          "popularity": 56,
+          "preview_url": "https://p.scdn.co/mp3-preview/65f8117883b4bf1fc0a067ae01ad606a32ae1c72?cid=774b29d4f13844c495f206cafdad9c86",
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:35KAT6TuJKhKM8Fi6XpObd"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-11T21:39:59Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/107QKfWvClTxoXXyt6LCN3"
+            },
+            "href": "https://api.spotify.com/v1/albums/107QKfWvClTxoXXyt6LCN3",
+            "id": "107QKfWvClTxoXXyt6LCN3",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273603e17f4e33ecd9f8dd44fa9",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02603e17f4e33ecd9f8dd44fa9",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851603e17f4e33ecd9f8dd44fa9",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2",
+            "release_date": "2017-03-17",
+            "release_date_precision": "day",
+            "total_tracks": 13,
+            "type": "album",
+            "uri": "spotify:album:107QKfWvClTxoXXyt6LCN3"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2VXsRo1aTjdh4KydrrKtF2"
+              },
+              "href": "https://api.spotify.com/v1/artists/2VXsRo1aTjdh4KydrrKtF2",
+              "id": "2VXsRo1aTjdh4KydrrKtF2",
+              "name": "Grems",
+              "type": "artist",
+              "uri": "spotify:artist:2VXsRo1aTjdh4KydrrKtF2"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 242712,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700001"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7HGTYcZtkKPWbMxR3eXhBc"
+          },
+          "href": "https://api.spotify.com/v1/tracks/7HGTYcZtkKPWbMxR3eXhBc",
+          "id": "7HGTYcZtkKPWbMxR3eXhBc",
+          "is_local": false,
+          "name": "Nappeux",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:7HGTYcZtkKPWbMxR3eXhBc"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-11T21:40:07Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/107QKfWvClTxoXXyt6LCN3"
+            },
+            "href": "https://api.spotify.com/v1/albums/107QKfWvClTxoXXyt6LCN3",
+            "id": "107QKfWvClTxoXXyt6LCN3",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273603e17f4e33ecd9f8dd44fa9",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02603e17f4e33ecd9f8dd44fa9",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851603e17f4e33ecd9f8dd44fa9",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2",
+            "release_date": "2017-03-17",
+            "release_date_precision": "day",
+            "total_tracks": 13,
+            "type": "album",
+            "uri": "spotify:album:107QKfWvClTxoXXyt6LCN3"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 226148,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO51700006"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1cOwF53LSRCq3D2BnTj9CU"
+          },
+          "href": "https://api.spotify.com/v1/tracks/1cOwF53LSRCq3D2BnTj9CU",
+          "id": "1cOwF53LSRCq3D2BnTj9CU",
+          "is_local": false,
+          "name": "Bébé aime la drogue",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 6,
+          "type": "track",
+          "uri": "spotify:track:1cOwF53LSRCq3D2BnTj9CU"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-12T07:39:15Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+                },
+                "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+                "id": "2pHk4wAmL7ofTAuvCIUWtv",
+                "name": "Roméo Elvis",
+                "type": "artist",
+                "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+                },
+                "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+                "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+                "name": "Le Motel",
+                "type": "artist",
+                "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/01uhkrTatcxTAXNzlFGY9P"
+            },
+            "href": "https://api.spotify.com/v1/albums/01uhkrTatcxTAXNzlFGY9P",
+            "id": "01uhkrTatcxTAXNzlFGY9P",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27319cd38d6d8c1196689dbfeeb",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0219cd38d6d8c1196689dbfeeb",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485119cd38d6d8c1196689dbfeeb",
+                "width": 64
+              }
+            ],
+            "name": "Morale 2luxe",
+            "release_date": "2018-02-16",
+            "release_date_precision": "day",
+            "total_tracks": 24,
+            "type": "album",
+            "uri": "spotify:album:01uhkrTatcxTAXNzlFGY9P"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4LLrhUqUv2Mi1NhHz0pjXd"
+              },
+              "href": "https://api.spotify.com/v1/artists/4LLrhUqUv2Mi1NhHz0pjXd",
+              "id": "4LLrhUqUv2Mi1NhHz0pjXd",
+              "name": "Le Motel",
+              "type": "artist",
+              "uri": "spotify:artist:4LLrhUqUv2Mi1NhHz0pjXd"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 2,
+          "duration_ms": 204128,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BE5EO1800008"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Uq7F0WL6YsFnilT3z8wyV"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0Uq7F0WL6YsFnilT3z8wyV",
+          "id": "0Uq7F0WL6YsFnilT3z8wyV",
+          "is_local": false,
+          "name": "Chanmax",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 8,
+          "type": "track",
+          "uri": "spotify:track:0Uq7F0WL6YsFnilT3z8wyV"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-13T16:38:28Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+                },
+                "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+                "id": "1Yfe3ONJlioHys7jwHdfVm",
+                "name": "Lomepal",
+                "type": "artist",
+                "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+              }
+            ],
+            "available_markets": [
+              "AD",
+              "AE",
+              "AR",
+              "AT",
+              "AU",
+              "BE",
+              "BG",
+              "BH",
+              "BO",
+              "BR",
+              "CA",
+              "CH",
+              "CL",
+              "CO",
+              "CR",
+              "CY",
+              "CZ",
+              "DE",
+              "DK",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ES",
+              "FI",
+              "FR",
+              "GB",
+              "GR",
+              "GT",
+              "HK",
+              "HN",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IS",
+              "IT",
+              "JO",
+              "JP",
+              "KW",
+              "LB",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MA",
+              "MC",
+              "MT",
+              "MX",
+              "MY",
+              "NI",
+              "NL",
+              "NO",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PH",
+              "PL",
+              "PS",
+              "PT",
+              "PY",
+              "QA",
+              "RO",
+              "SA",
+              "SE",
+              "SG",
+              "SK",
+              "SV",
+              "TH",
+              "TN",
+              "TR",
+              "TW",
+              "US",
+              "UY",
+              "VN",
+              "ZA"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/7C809pDAlv4nolQo5DnkXI"
+            },
+            "href": "https://api.spotify.com/v1/albums/7C809pDAlv4nolQo5DnkXI",
+            "id": "7C809pDAlv4nolQo5DnkXI",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b27390cef4228c60a50849e94697",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e0290cef4228c60a50849e94697",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d0000485190cef4228c60a50849e94697",
+                "width": 64
+              }
+            ],
+            "name": "FLIP (Deluxe)",
+            "release_date": "2017-12-01",
+            "release_date_precision": "day",
+            "total_tracks": 27,
+            "type": "album",
+            "uri": "spotify:album:7C809pDAlv4nolQo5DnkXI"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Yfe3ONJlioHys7jwHdfVm"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Yfe3ONJlioHys7jwHdfVm",
+              "id": "1Yfe3ONJlioHys7jwHdfVm",
+              "name": "Lomepal",
+              "type": "artist",
+              "uri": "spotify:artist:1Yfe3ONJlioHys7jwHdfVm"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "disc_number": 1,
+          "duration_ms": 264133,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "FR9W11709419"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/28i2jifRUwMGCf4NJ7axxr"
+          },
+          "href": "https://api.spotify.com/v1/tracks/28i2jifRUwMGCf4NJ7axxr",
+          "id": "28i2jifRUwMGCf4NJ7axxr",
+          "is_local": false,
+          "name": "70",
+          "popularity": 45,
+          "preview_url": "https://p.scdn.co/mp3-preview/aa15d059358f05d2e5cdf0d6e2c14fc0ad3c0ac6?cid=774b29d4f13844c495f206cafdad9c86",
+          "track": true,
+          "track_number": 2,
+          "type": "track",
+          "uri": "spotify:track:28i2jifRUwMGCf4NJ7axxr"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-13T16:38:52Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+                },
+                "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+                "id": "1mMUzAMrNqoTHgtxA0dZi6",
+                "name": "Caballero & JeanJass",
+                "type": "artist",
+                "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+              }
+            ],
+            "available_markets": [],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/2fi76HkoEb1Y9INTfPFYSp"
+            },
+            "href": "https://api.spotify.com/v1/albums/2fi76HkoEb1Y9INTfPFYSp",
+            "id": "2fi76HkoEb1Y9INTfPFYSp",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273af038d0ba2a856e7debf1b1f",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02af038d0ba2a856e7debf1b1f",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851af038d0ba2a856e7debf1b1f",
+                "width": 64
+              }
+            ],
+            "name": "Double Hélice 2",
+            "release_date": "2017-05-12",
+            "release_date_precision": "day",
+            "total_tracks": 16,
+            "type": "album",
+            "uri": "spotify:album:2fi76HkoEb1Y9INTfPFYSp"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+              },
+              "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+              "id": "1mMUzAMrNqoTHgtxA0dZi6",
+              "name": "Caballero & JeanJass",
+              "type": "artist",
+              "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+            }
+          ],
+          "available_markets": [],
+          "disc_number": 1,
+          "duration_ms": 255505,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "BEEO71700001"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6vuuZU99A2ilEm7gGhDe7z"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6vuuZU99A2ilEm7gGhDe7z",
+          "id": "6vuuZU99A2ilEm7gGhDe7z",
+          "is_local": false,
+          "name": "Sur Mon Nom",
+          "popularity": 0,
+          "preview_url": null,
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:6vuuZU99A2ilEm7gGhDe7z"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-18T05:20:34Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "album",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/5MynxBz4ZMqvUzpcxTZl4C"
+                },
+                "href": "https://api.spotify.com/v1/artists/5MynxBz4ZMqvUzpcxTZl4C",
+                "id": "5MynxBz4ZMqvUzpcxTZl4C",
+                "name": "Therapie TAXI",
+                "type": "artist",
+                "uri": "spotify:artist:5MynxBz4ZMqvUzpcxTZl4C"
+              }
+            ],
+            "available_markets": [
+              "AD",
+              "AE",
+              "AR",
+              "AT",
+              "AU",
+              "BE",
+              "BG",
+              "BH",
+              "BO",
+              "BR",
+              "CA",
+              "CH",
+              "CL",
+              "CO",
+              "CR",
+              "CY",
+              "CZ",
+              "DE",
+              "DK",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ES",
+              "FI",
+              "FR",
+              "GB",
+              "GR",
+              "GT",
+              "HK",
+              "HN",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IS",
+              "IT",
+              "JO",
+              "JP",
+              "KW",
+              "LB",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MA",
+              "MC",
+              "MT",
+              "MX",
+              "MY",
+              "NI",
+              "NL",
+              "NO",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PH",
+              "PL",
+              "PS",
+              "PT",
+              "PY",
+              "QA",
+              "RO",
+              "SA",
+              "SE",
+              "SG",
+              "SK",
+              "SV",
+              "TH",
+              "TN",
+              "TR",
+              "TW",
+              "US",
+              "UY",
+              "VN",
+              "ZA"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/1j4pZyBTGUSvp3e5loBgez"
+            },
+            "href": "https://api.spotify.com/v1/albums/1j4pZyBTGUSvp3e5loBgez",
+            "id": "1j4pZyBTGUSvp3e5loBgez",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273d06c36953d960e241f1522f8",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02d06c36953d960e241f1522f8",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851d06c36953d960e241f1522f8",
+                "width": 64
+              }
+            ],
+            "name": "Hit Sale",
+            "release_date": "2018-02-02",
+            "release_date_precision": "day",
+            "total_tracks": 14,
+            "type": "album",
+            "uri": "spotify:album:1j4pZyBTGUSvp3e5loBgez"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5MynxBz4ZMqvUzpcxTZl4C"
+              },
+              "href": "https://api.spotify.com/v1/artists/5MynxBz4ZMqvUzpcxTZl4C",
+              "id": "5MynxBz4ZMqvUzpcxTZl4C",
+              "name": "Therapie TAXI",
+              "type": "artist",
+              "uri": "spotify:artist:5MynxBz4ZMqvUzpcxTZl4C"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2pHk4wAmL7ofTAuvCIUWtv"
+              },
+              "href": "https://api.spotify.com/v1/artists/2pHk4wAmL7ofTAuvCIUWtv",
+              "id": "2pHk4wAmL7ofTAuvCIUWtv",
+              "name": "Roméo Elvis",
+              "type": "artist",
+              "uri": "spotify:artist:2pHk4wAmL7ofTAuvCIUWtv"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "disc_number": 1,
+          "duration_ms": 184400,
+          "episode": false,
+          "explicit": false,
+          "external_ids": {
+            "isrc": "FR7O51700210"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3yndKI4zWEyC36BQYrdKBA"
+          },
+          "href": "https://api.spotify.com/v1/tracks/3yndKI4zWEyC36BQYrdKBA",
+          "id": "3yndKI4zWEyC36BQYrdKBA",
+          "is_local": false,
+          "name": "Hit Sale (feat. Roméo Elvis)",
+          "popularity": 65,
+          "preview_url": "https://p.scdn.co/mp3-preview/d8a0f59d3ea2bc7fbede12123d66a7559c2e1c8c?cid=774b29d4f13844c495f206cafdad9c86",
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:3yndKI4zWEyC36BQYrdKBA"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      },
+      {
+        "added_at": "2018-04-25T14:36:01Z",
+        "added_by": {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/21mbb3q6kny2nttzek2dminqq"
+          },
+          "href": "https://api.spotify.com/v1/users/21mbb3q6kny2nttzek2dminqq",
+          "id": "21mbb3q6kny2nttzek2dminqq",
+          "type": "user",
+          "uri": "spotify:user:21mbb3q6kny2nttzek2dminqq"
+        },
+        "is_local": false,
+        "primary_color": null,
+        "track": {
+          "album": {
+            "album_type": "single",
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+                },
+                "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+                "id": "1mMUzAMrNqoTHgtxA0dZi6",
+                "name": "Caballero & JeanJass",
+                "type": "artist",
+                "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+              }
+            ],
+            "available_markets": [
+              "AD",
+              "AE",
+              "AR",
+              "AT",
+              "AU",
+              "BE",
+              "BG",
+              "BH",
+              "BO",
+              "BR",
+              "CA",
+              "CH",
+              "CL",
+              "CO",
+              "CR",
+              "CY",
+              "CZ",
+              "DE",
+              "DK",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ES",
+              "FI",
+              "FR",
+              "GB",
+              "GR",
+              "GT",
+              "HK",
+              "HN",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IS",
+              "IT",
+              "JO",
+              "JP",
+              "KW",
+              "LB",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MA",
+              "MC",
+              "MT",
+              "MX",
+              "MY",
+              "NI",
+              "NL",
+              "NO",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PH",
+              "PL",
+              "PS",
+              "PT",
+              "PY",
+              "QA",
+              "RO",
+              "SA",
+              "SE",
+              "SG",
+              "SK",
+              "SV",
+              "TH",
+              "TN",
+              "TR",
+              "TW",
+              "US",
+              "UY",
+              "VN",
+              "ZA"
+            ],
+            "external_urls": {
+              "spotify": "https://open.spotify.com/album/4DdGvAHnovUoYP68zfnNAB"
+            },
+            "href": "https://api.spotify.com/v1/albums/4DdGvAHnovUoYP68zfnNAB",
+            "id": "4DdGvAHnovUoYP68zfnNAB",
+            "images": [
+              {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273651e9defafd4b32541a058bc",
+                "width": 640
+              },
+              {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02651e9defafd4b32541a058bc",
+                "width": 300
+              },
+              {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851651e9defafd4b32541a058bc",
+                "width": 64
+              }
+            ],
+            "name": "Chef",
+            "release_date": "2018-01-02",
+            "release_date_precision": "day",
+            "total_tracks": 1,
+            "type": "album",
+            "uri": "spotify:album:4DdGvAHnovUoYP68zfnNAB"
+          },
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1mMUzAMrNqoTHgtxA0dZi6"
+              },
+              "href": "https://api.spotify.com/v1/artists/1mMUzAMrNqoTHgtxA0dZi6",
+              "id": "1mMUzAMrNqoTHgtxA0dZi6",
+              "name": "Caballero & JeanJass",
+              "type": "artist",
+              "uri": "spotify:artist:1mMUzAMrNqoTHgtxA0dZi6"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "disc_number": 1,
+          "duration_ms": 214054,
+          "episode": false,
+          "explicit": true,
+          "external_ids": {
+            "isrc": "TCADK1767858"
+          },
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6uN4qvaFynP5J0LIWuyzcw"
+          },
+          "href": "https://api.spotify.com/v1/tracks/6uN4qvaFynP5J0LIWuyzcw",
+          "id": "6uN4qvaFynP5J0LIWuyzcw",
+          "is_local": false,
+          "name": "Chef",
+          "popularity": 42,
+          "preview_url": "https://p.scdn.co/mp3-preview/748d5fc9d0cc2bdb0292cfcf1892a02ea0d20439?cid=774b29d4f13844c495f206cafdad9c86",
+          "track": true,
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:6uN4qvaFynP5J0LIWuyzcw"
+        },
+        "video_thumbnail": {
+          "url": null
+        }
+      }
+    ],
+    "limit": 100,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 17
+  },
+  "type": "playlist",
+  "uri": "spotify:playlist:35ItlrwpednFpZjJ8ThZou"
+}
