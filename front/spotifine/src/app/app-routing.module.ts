@@ -18,7 +18,11 @@ export const routes: CustomRoutes = [
     path: 'callback',
     loadChildren: () => import('./pages/callback/callback.module').then(m => m.CallbackPageModule)
   },
-  { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },  {
+    path: 'playlist',
+    loadChildren: () => import('./pages/playlist/playlist.module').then( m => m.PlaylistPageModule)
+  }
+
 ];
 
 
