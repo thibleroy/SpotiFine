@@ -10,8 +10,8 @@ import {
 const router = Router();
 
 router.get('/:id', playlistGetController);
-router.post('/',  playlistPostController);
+router.post('',  playlistPostController);
 router.put('/:id', playlistPutController);
 router.delete('/:id', playlistDeleteController);
-router.get('/', playlistsGetController)
+router.get('', playlistsGetController)
 export default {route: '/playlists', router: router};

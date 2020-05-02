@@ -1,5 +1,5 @@
 import {METHOD, Method} from "./interfaces";
-const at = 'BQCRWL5ruKGLe7XavepsPYMzDPkhV2GAgGEDRKQJ9zE1PBgbovaxxnXmY5H7a8AOwCZbdU13qnEUcW7jXUYuPAPycsFOKBXXnqXhcwFvNgSvOpHgRo12IDrovwwUxpQ-hVRjdDnBT9fPvsOC2kcmwYO7voQr_yZmuCF9UNizzRJ3aO9FArILVQ'
+const at = 'BQBvpj2vmIaoqMy8WbXD_nTc7YRNMa5NN_q1QzSOGXtOIwsoUJCstpRzfNHSE4a4BSnHD8NXVvFXfVp0JsGYIJxSKaJ2k8kCtid1U2rkAO7dAF8bT_YZOjLifIvqJ734DnyxKwZDlB4dcAloWZHEXregNYjw7-GmpzUQaHzMUIdy2uz22i52cg'
 const method_factory = (name: string, route: string) => {
     return (id: string = '', body: string = '') => {
             return cy.request({
