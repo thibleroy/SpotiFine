@@ -3,7 +3,7 @@ const at = 'BQA3sBywaM8P9T9AgVcKiU9YAFseqpHdeQFItxnVm_RC9nGIvuRwL3gMIyK6fW2kBChM
 const method_factory = (name: string, route: string, json?: any) => {
     return () => {
             return cy.request({
-                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}/zzzzzzzzzzzz`,
+                url: `https://${Cypress.env('SF_BACKEND_ADDR_DEV')}:${Cypress.env('SF_BACKEND_PORT')}/${route}/`,
                 qs: {
                     spotifyId: Cypress.env('SPOTIFY_USER_ID')
                 },

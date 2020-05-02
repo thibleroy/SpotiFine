@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-artist',
+  selector: 'sf-artist',
   templateUrl: './artist.component.html',
   styleUrls: ['./artist.component.scss'],
 })
 export class ArtistComponent implements OnInit {
+  @Input() artist: SpotifyApi.ArtistObjectFull
 
-  constructor() { }
+  constructor() { 
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

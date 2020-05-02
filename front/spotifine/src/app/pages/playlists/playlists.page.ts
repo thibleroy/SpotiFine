@@ -16,9 +16,11 @@ export class PlaylistsPage implements OnInit{
               private spotify: SpotifyConnectorService) {}
   async ngOnInit() {
       this.playlists_loaded = false;
-      await this.getPlaylists();
       if (!this.session.isAuth()) {
         await this.router.navigateByUrl('welcome');
+      }
+      else{
+      await this.getPlaylists();
       }
   }
   async getPlaylists() {

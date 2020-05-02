@@ -7,11 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PlaylistsComponent implements OnInit {
   @Input() userPlaylists: SpotifyApi.ListOfUsersPlaylistsResponse;
-  loaded = false;
-  constructor() {
-  }
 
-  async ngOnInit() {
-  }
+  constructor() {}
+
+  async ngOnInit() {}
 
 }
