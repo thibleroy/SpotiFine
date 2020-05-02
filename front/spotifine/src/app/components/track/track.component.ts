@@ -11,4 +11,7 @@ export class TrackComponent implements OnInit {
 
   ngOnInit() {}
 
+  artist() {
+    return this.track.artists.map((t) => t.name)
+  }
 }

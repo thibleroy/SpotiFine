@@ -11,8 +11,11 @@
     <h1 class="sf_section_title">
       {{track.name}}
     </h1>
-    <p class="sf_title">
-      {{track.artists[0].name}}
+    <h2 class="sf_title">
+      {{track.album.name}}
+    </h2>
+    <p class="sf_text">
+      {{artist()}}
     </p>
   </ion-label>
   <ion-buttons>
