@@ -1,10 +1,14 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { SessionService } from "../../../services/session.service";
+import { Store, select } from '@ngrx/store';
+import { ApplicationState } from '../../../store/application_state/application_state.reducer'
 import { SpotifyConnectorService } from "../../../services/spotify-connector.service";
 import { randomString } from "../../../utils";
 import { AuthService } from "../../../services/auth.service";
 import { Router } from "@angular/router";
 import { identifiers } from '../../../html_identifiers'
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'sf-header',
@@ -13,14 +17,19 @@ import { identifiers } from '../../../html_identifiers'
 })
 export class HeaderComponent implements OnInit {
   currentWindowWidth: Number;
-  loaded: boolean;
   account: SpotifyApi.CurrentUsersProfileResponse;
   identifiers = identifiers;
+  applicationState$: Observable<ApplicationState>;
+  isLoaded = false;
+  isLoggedIn: boolean = false;
+  
   constructor(public session: SessionService,
     public spotify: SpotifyConnectorService,
     private auth: AuthService,
-    private router: Router) {
+    private router: Router,
+    private store: Store<{ applicationState: ApplicationState }>) {
     this.currentWindowWidth = window.innerWidth
+    this.applicationState$ = store.pipe(select('applicationState'));
   }
 
   @HostListener('window:resize')
@@ -29,26 +38,17 @@ export class HeaderComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.loaded = false;
-    if (this.session.isAuth()) {
-      try {
-        this.account = await this.spotify.getAccount();
-        this.loaded = true;
-      } catch (e) {
-        this.auth.refreshToken(this.session.get_refresh_token());
-        this.account = await this.spotify.getAccount();
-        this.loaded = true;
-      } finally {
-        if (!this.loaded) {
-          await this.session.log_out();
-        }
+
+    this.applicationState$.subscribe(async (appState: ApplicationState) => {
+      this.isLoggedIn = appState.isLoggedIn;
+      if (appState.isLoaded == true && this.isLoaded == false) {
+        this.isLoaded = true;
+        this.account = appState.account;
       }
-    } else {
-      console.log('hey', this.router.url);
-      if (this.router.url !== '/welcome') {
-        await this.router.navigateByUrl('/welcome');
+      else if (appState.isLoaded == false){
+        this.isLoaded = false;
       }
-    }
+    })
   }
 
   authorize() {

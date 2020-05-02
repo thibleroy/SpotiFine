@@ -23,6 +23,8 @@ export class PlaylistsPage implements OnInit{
   }
   async getPlaylists() {
       this.playlists = await this.spotify.getUserPlaylists();
+      if(this.playlists){
       this.playlists_loaded = true;
+      }
   }
 }

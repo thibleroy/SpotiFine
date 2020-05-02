@@ -6,6 +6,10 @@ import { Router, RouterEvent } from '@angular/router';
 import { routes } from './app-routing.module'
 import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
 import {identifiers} from "../html_identifiers";
+import { Store, select } from '@ngrx/store'; 
+import { ApplicationState } from './../store/application_state/application_state.reducer'
+import {  MenuController } from '@ionic/angular';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +19,21 @@ import {identifiers} from "../html_identifiers";
 export class AppComponent {
   identifiers = identifiers;
   routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined &&  route.data_cy != undefined && route.icon != undefined);
+  applicationState$: Observable<ApplicationState>;
+  isLoggedIn : boolean = false;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private router: Router
+    private router: Router,
+    private menuCtrl: MenuController,
+    private store: Store<{ applicationState: ApplicationState }>
   ) {
+    this.applicationState$ = store.pipe(select('applicationState'));
 
+    this.applicationState$.subscribe((appState: ApplicationState) => {
+      this.isLoggedIn = appState.isLoggedIn
+    })
     this.router.events.subscribe((event: RouterEvent) => {
       if(event.url != undefined){
         this.selectedPath = event.url;

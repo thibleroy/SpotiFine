@@ -29,5 +29,4 @@ export class AuthService {
     api_get(path: string, headers?: any): Observable<any> {
         return this.http.get(this.api + path, {headers: {... headers, access_token: this.session.get_access_token()}});
     }
-
 }

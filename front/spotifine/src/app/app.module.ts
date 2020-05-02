@@ -11,6 +11,7 @@ import { SpotifyConnectorService } from "../services/spotify-connector.service";
 import { SessionService } from "../services/session.service";
 import { AuthService } from "../services/auth.service";
 import { FooterModule } from "./components/footer/footer.module";
+import { HeaderModule } from "./components/header/header.module";
 
 import { StoreModule } from '@ngrx/store';
 import { applicationStateReducer } from '../store/application_state/application_state.reducer';
@@ -19,7 +20,7 @@ import { applicationStateReducer } from '../store/application_state/application_
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, StoreModule.forRoot({ applicationState: applicationStateReducer }), IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FooterModule],
+  imports: [BrowserModule, StoreModule.forRoot({ applicationState: applicationStateReducer }), IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FooterModule, HeaderModule],
   providers: [
     StatusBar,
     SplashScreen,

@@ -1,29 +1,40 @@
 <ion-app>
-  <ion-split-pane contentId="main-content" when="lg">
-    <ion-menu [attr.data-cy]="identifiers.side_menu" contentId="main-content" side="start" menuId="first">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title slot="start" class="sf_general_title">SPOTIFINE</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list id="inbox-list" lines="none">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of routes">
-            <ion-item routerDirection="root" button="true" type="button" [routerLink]="[p.path]" [class.active.item]="selectedPath.includes(p.path)"
-              [attr.data-cy]="p.data_cy">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.name }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-
-    <div class="ion-page" id="main-content">
-      <ion-content>
-        <ion-router-outlet></ion-router-outlet>
-      </ion-content>
-      <sf-footer></sf-footer>
-    </div>
-  </ion-split-pane>
+  <div *ngIf="isLoggedIn">
+    <ion-split-pane contentId="main-content" when="lg">
+      <ion-menu [attr.data-cy]="identifiers.side_menu" contentId="main-content" side="start" menuId="first">
+        <ion-header >
+          <ion-toolbar>
+            <ion-title slot="start" class="sf_general_title">SPOTIFINE</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list id="inbox-list" lines="none">
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of routes">
+              <ion-item routerDirection="root" button="true" type="button" [routerLink]="[p.path]"
+                [class.active.item]="selectedPath.includes(p.path)" [attr.data-cy]="p.data_cy">
+                <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+                <ion-label>{{ p.name }}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+  
+      <div class="ion-page" id="main-content">
+        <sf-header></sf-header>
+        <ion-content>
+          <ion-router-outlet></ion-router-outlet>
+        </ion-content>
+        <sf-footer></sf-footer>
+      </div>
+    </ion-split-pane>
+  </div>
+  <div *ngIf="!isLoggedIn" class="ion-page">
+    <sf-header></sf-header>
+    <ion-content>
+      <ion-router-outlet></ion-router-outlet>
+    </ion-content>
+    <sf-footer></sf-footer>
+  </div>
+  
 </ion-app>
