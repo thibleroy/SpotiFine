@@ -4,6 +4,7 @@ export const identifiers = {
     header_side_menu_button : 'header_side_menu_button',
     playlists_route: 'playlists_route',
     welcome_route: 'welcome_route',
+    artists_route: 'artists_route',
 
     email_input: 'emailinput',
     password_input: 'passwordinput',

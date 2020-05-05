@@ -16,6 +16,8 @@ describe('> 992px', () => {
         cy.location('pathname').should('contain', '/playlists');
         cy.dataCy(identifiers.welcome_route).click();
         cy.location('pathname').should('contain', '/welcome');
+        cy.dataCy(identifiers.artists_route).click();
+        cy.location('pathname').should('contain', '/artists');
     });
 });
 
