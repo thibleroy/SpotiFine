@@ -1,5 +1,5 @@
-import {Playlist, PlaylistModel} from "../models/playlist.model";
-import {User} from "../models/user.model";
+import {Playlist, PlaylistModel} from "../../../lib/model/playlist.model";
+import {User} from "../../../lib/model/user.model";
 
 export const getPlaylist = async(id: string): Promise<Playlist|null>  => {
     return PlaylistModel.findOne({_id: id});

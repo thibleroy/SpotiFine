@@ -13,7 +13,7 @@
               <ion-item routerDirection="root" button="true" type="button" [routerLink]="[p.path]"
                 [class.active.item]="selectedPath.includes(p.path)" [attr.data-cy]="p.data_cy">
                 <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                <ion-label class="sf_text">{{ p.name }}</ion-label>
+                <h5 class="sf_text">{{ p.name }}</h5>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>

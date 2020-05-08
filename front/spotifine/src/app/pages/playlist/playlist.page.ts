@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
+import {Router} from '@angular/router';
+import {SpotifyConnectorService} from '../../../services/spotify-connector.service';
 
 @Component({
   selector: 'app-playlist',
@@ -22,10 +22,8 @@ export class PlaylistPage implements OnInit {
     try {
       this.playlist = await this.spotifyConnectorService.getPlaylist(id);
       this.loaded = true;
-      console.log('p', this.playlist)
-    } catch(e) {
+    } catch (e) {
       alert('error');
     }
   }
-
 }

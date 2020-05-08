@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { PlaylistPageRoutingModule } from './playlist-routing.module';
 
 import { PlaylistPage } from './playlist.page';
-import {TrackModule} from "../../components/track/track.module";
+import {TrackModule} from '../../components/track/track.module';
+import {ItemModule} from '../../components/item/item.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {TrackModule} from "../../components/track/track.module";
     FormsModule,
     IonicModule,
     PlaylistPageRoutingModule,
-      TrackModule
+      TrackModule,
+      ItemModule
   ],
   declarations: [PlaylistPage]
 })

@@ -1,4 +1,4 @@
-import {UserModel, User} from '../models/user.model';
+import {UserModel, User} from '../../../lib/model/user.model';
 export const getUser = async(spotify_id: string): Promise<User|null> => {
     return UserModel.findOne({spotify_id: spotify_id});
 }

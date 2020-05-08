@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Route } from '@angular/router';
-import { CustomRoutes } from '../lib/custom_routes'
+import { CustomRoutes } from '../lib/custom_routes';
 
 export const routes: CustomRoutes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
