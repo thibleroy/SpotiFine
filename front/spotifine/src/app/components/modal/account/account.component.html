@@ -1,22 +1,24 @@
 <ion-header translucent>
   <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button (click)="logout()" class="sf_button" size="large">
-        <ion-icon name="log-out-outline" class="sf_icons"></ion-icon>
-      </ion-button>
-      <ion-button (click)="close()">
-        <ion-icon name="close-outline" class="sf_icons"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title class="sf_general_title">
-      {{account.display_name}}
-    </ion-title>
-    <ion-avatar slot="start" class="sf_clean_item">
-      <ion-img *ngIf="account.images.length>0 else no_img" class="sf_avatar" src="{{account.images[0].url}}"></ion-img>
-      <ng-template #no_img>
-        <ion-img data-cy="avatar_modal" class="sf_avatar" src="../../../assets/icon/account.svg"></ion-img>
-      </ng-template>
-    </ion-avatar>
+    <ion-item lines="none">
+      <ion-avatar slot="start" class="sf_clean_item">
+        <ion-img *ngIf="account.images.length>0 else no_img" class="sf_avatar" src="{{account.images[0].url}}"></ion-img>
+        <ng-template #no_img>
+          <ion-img data-cy="avatar_modal" class="sf_avatar" src="../../../assets/icon/account.svg"></ion-img>
+        </ng-template>
+      </ion-avatar>
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()" class="sf_button" size="large">
+          <ion-icon name="log-out-outline" class="sf_icons"></ion-icon>
+        </ion-button>
+        <ion-button (click)="close()">
+          <ion-icon name="close-outline" class="sf_icons"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="sf_general_title">
+        {{account.display_name}}
+      </ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
