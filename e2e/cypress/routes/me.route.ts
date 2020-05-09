@@ -13,3 +13,8 @@ export const me_artists = (fixture) => cy.route({
     response: `fixture:${fixture}`,
     method: 'GET'
 });
+export const playlist = () => cy.route({
+    url: 'https://api.spotify.com/v1/me/top/artists',
+    response: `fixture:playlist.json`,
+    method: 'GET'
+});

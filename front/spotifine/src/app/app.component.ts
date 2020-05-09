@@ -3,11 +3,11 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router, RouterEvent } from '@angular/router';
-import { routes } from './app-routing.module'
+import { routes } from './app-routing.module';
 import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
-import { identifiers } from "../html_identifiers";
+import { identifiers } from '../html_identifiers';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState } from './../store/application_state/application_state.reducer'
+import { ApplicationState } from '../store/application_state/application_state.reducer';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,9 +17,10 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   identifiers = identifiers;
-  routes: CustomRoutes = routes.filter((route: CustomRoute) => route.name != undefined && route.data_cy != undefined && route.icon != undefined);
+  routes: CustomRoutes;
   applicationState$: Observable<ApplicationState>;
-  isLoggedIn$: boolean = false;
+  isLoggedIn$: boolean;
+  selectedPath: string;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -27,13 +28,16 @@ export class AppComponent {
     private router: Router,
     private store: Store<{ applicationState: ApplicationState }>
   ) {
+    this.routes = routes.filter((route: CustomRoute) => route.name !== undefined && route.data_cy !== undefined && route.icon !== undefined);
+    this.selectedPath = '';
+    this.isLoggedIn$ = false;
     this.applicationState$ = store.pipe(select('applicationState'));
 
     this.applicationState$.subscribe((appState: ApplicationState) => {
-      this.isLoggedIn$ = appState.isLoggedIn
-    })
+      this.isLoggedIn$ = appState.isLoggedIn;
+    });
     this.router.events.subscribe((event: RouterEvent) => {
-      if (event.url != undefined) {
+      if (event.url !== undefined) {
         this.selectedPath = event.url;
       }
     });
@@ -43,8 +47,6 @@ export class AppComponent {
     }
     this.initializeApp();
   }
-
-  selectedPath: string = '';
 
   initializeApp() {
     this.platform.ready().then(() => {

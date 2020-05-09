@@ -1,5 +1,5 @@
-import {Artists, ArtistsModel} from "../models/artists.model";
-import {User} from "../models/user.model";
+import {Artists, ArtistsModel} from "../../../lib/model/artists.model";
+import {User} from "../../../lib/model/user.model";
 
 export const getArtists = async(id: string): Promise<Artists|null>  => {
     return ArtistsModel.findOne({_id: id});

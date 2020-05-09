@@ -1,0 +1,26 @@
+{
+  "last_modified": "Date",
+  "description": "",
+  "followers": {
+    "total": 0
+  },
+  "id": "3a1zRfeVzOYH1j2ML676ch",
+  "images": [
+    {
+      "height": null,
+      "url": "https://i.scdn.co/image/ab67706c0000da84172ab313c30f0dfc039a640f",
+      "width": null
+    }
+  ],
+  "name": "QotsiQotsa",
+  "owner": ACCOUNT
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/3a1zRfeVzOYH1j2ML676ch/tracks?offset=0&limit=100",
+    "items": [
+      {
+        "track": TRACK
+      }
+    ]
+  },
+  "type": "playlist"
+}

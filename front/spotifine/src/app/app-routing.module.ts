@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Route } from '@angular/router';
-import { CustomRoutes } from '../lib/custom_routes'
+import { CustomRoutes } from '../lib/custom_routes';
 
 export const routes: CustomRoutes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   {
-    path: 'welcome', data_cy: "welcome_route", name: "Welcome", icon: "Home",
+    path: 'welcome', data_cy: "welcome_route", name: "Welcome", icon: "star",
     loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomePageModule)
   },
-  { path: 'playlists', data_cy: "playlists_route", name: "Playlists", icon: "musical-notes", 
+  { path: 'playlists', data_cy: "playlists_route", name: "Playlists", icon: "Home", 
     loadChildren: () => import('./pages/playlists/playlists.module').then(m => m.PlaylistsPageModule) },
   {
     path: 'profile',
@@ -22,10 +22,11 @@ export const routes: CustomRoutes = [
     path: 'artists', data_cy: "artists_route", name: "My Top Artists", icon: "star",
     loadChildren: () => import('./pages/artists/artists.module').then( m => m.ArtistsPageModule)
   },
-  { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-
-
-
+  {
+    path: 'playlist/:id',
+    loadChildren: () => import('./pages/playlist/playlist.module').then( m => m.PlaylistPageModule)
+  },
+  { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
 ];
 
 

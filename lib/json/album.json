@@ -1,0 +1,21 @@
+{
+  "artists" : ARTIST[],
+  "id" : "4eqJ2bgFYVtM6JaZCLlONE",
+  "images" : [ {
+    "height" : 640,
+    "url" : "https://i.scdn.co/image/ab67616d0000b273985ec9fdac6f9c640c1db15b",
+    "width" : 640
+  }, {
+    "height" : 300,
+    "url" : "https://i.scdn.co/image/ab67616d00001e02985ec9fdac6f9c640c1db15b",
+    "width" : 300
+  }, {
+    "height" : 64,
+    "url" : "https://i.scdn.co/image/ab67616d00004851985ec9fdac6f9c640c1db15b",
+    "width" : 64
+  } ],
+  "name" : "Dirty Harry",
+  "release_date" : "2005-11-18",
+  "total_tracks" : 3,
+  "type" : "album",
+}

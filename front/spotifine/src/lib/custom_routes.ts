@@ -1,8 +1,8 @@
 import {Route} from '@angular/router';
 
-export interface CustomRoute extends Route{
-    name?: String;
-    icon?: String;
-    data_cy?: String;
+export interface CustomRoute extends Route {
+    name?: string;
+    icon?: string;
+    data_cy?: string;
   }
 export declare type CustomRoutes = CustomRoute[];

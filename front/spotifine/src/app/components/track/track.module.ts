@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
+import {TrackComponent} from './track.component';
 import {IonicModule} from '@ionic/angular';
 import {CommonModule} from '@angular/common';
-import {PlaylistComponent} from './playlist.component';
 import {ItemModule} from '../item/item.module';
+
 
 @NgModule({
     imports: [
@@ -10,10 +11,9 @@ import {ItemModule} from '../item/item.module';
         CommonModule,
         ItemModule
     ],
-    exports: [PlaylistComponent],
-    declarations: [PlaylistComponent],
+    exports: [TrackComponent],
+    declarations: [TrackComponent],
     providers: [],
 })
-export class PlaylistModule {
-
+export class TrackModule {
 }
