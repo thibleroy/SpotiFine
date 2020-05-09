@@ -1,12 +1,11 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { SessionService } from "../../../services/session.service";
+import { SessionService } from '../../../services/session.service';
 import { Store, select } from '@ngrx/store';
-import { ApplicationState } from '../../../store/application_state/application_state.reducer'
-import { SpotifyConnectorService } from "../../../services/spotify-connector.service";
-import { randomString } from "../../../utils";
-import { AuthService } from "../../../services/auth.service";
-import { Router } from "@angular/router";
-import { identifiers } from '../../../html_identifiers'
+import { ApplicationState } from '../../../store/application_state/application_state.reducer';
+import { SpotifyConnectorService } from '../../../services/spotify-connector.service';
+import { randomString } from '../../../utils';
+import { AuthService } from '../../../services/auth.service';
+import { identifiers } from '../../../html_identifiers';
 import { Observable } from 'rxjs';
 
 
@@ -16,34 +15,32 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  currentWindowWidth: Number;
+  currentWindowWidth: number;
   account: SpotifyApi.CurrentUsersProfileResponse;
   identifiers = identifiers;
   applicationState$: Observable<ApplicationState>;
-  isLoaded = false;
-  isLoggedIn: boolean = false;
-
+  isLoaded: boolean;
+  isLoggedIn: boolean;
   constructor(public session: SessionService,
-    public spotify: SpotifyConnectorService,
-    private auth: AuthService,
-    private router: Router,
-    private store: Store<{ applicationState: ApplicationState }>) {
-    this.currentWindowWidth = window.innerWidth
-    this.applicationState$ = store.pipe(select('applicationState'));
-  }
+              private spotify: SpotifyConnectorService,
+              private auth: AuthService,
+              private store: Store<{ applicationState: ApplicationState }>) {}
 
   @HostListener('window:resize')
   onResize() {
-    this.currentWindowWidth = window.innerWidth
+    this.currentWindowWidth = window.innerWidth;
   }
 
   async ngOnInit() {
-
-    this.applicationState$.subscribe(async (appState: ApplicationState) => {
+    this.currentWindowWidth = window.innerWidth;
+    this.applicationState$ = this.store.pipe(select('applicationState'));
+    this.isLoaded = false;
+    this.isLoggedIn = false;
+    this.applicationState$.subscribe((appState: ApplicationState) => {
       this.isLoggedIn = appState.isLoggedIn;
       this.account = appState.account;
       this.isLoaded = appState.isLoaded;
-    })
+    });
   }
 
   authorize() {

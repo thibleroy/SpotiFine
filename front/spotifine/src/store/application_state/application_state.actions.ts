@@ -6,4 +6,4 @@ export const setUnloaded = createAction('setUnloaded');
 export const setLoggedIn = createAction('setLoggedIn');
 export const setLoggedOut = createAction('setLoggedOut');
 
-export const setAccount = createAction('setAccount',props<{ account: SpotifyApi.CurrentUsersProfileResponse }>());
+export const setAccount = createAction('setAccount', props<{ account: SpotifyApi.CurrentUsersProfileResponse }>());

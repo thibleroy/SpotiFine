@@ -1,24 +1,24 @@
-<ion-item href="{{item.href}}">
-  <ion-thumbnail slot="start" *ngIf="item.thumbnail">
+  <ion-item href="{{item.href}}">
+    <ion-thumbnail slot="start" *ngIf="item.thumbnail">
       <ion-img src="{{item.thumbnail}}"></ion-img>
-  </ion-thumbnail>
-  <ion-label>
-    <h1 *ngIf="item.h1" class="sf_section_title ion-text-left" style="color: {{item.h1.color}}">
-      {{item.h1.value}}
-    </h1>
-    <h2 *ngIf="item.h2" class="sf_title" style="color: {{item.h2.color}}">
-      {{item.h2.value}}
-    </h2>
-    <h3 *ngIf="item.h3" class="sf_title" style="color: {{item.h3.color}}">
-      {{item.h3.value}}
-    </h3>
-    <p *ngIf="item.p" class="sf_text" style="color: {{item.p.color}}">
-      {{item.p.value}}
-    </p>
-  </ion-label>
-  <ion-buttons *ngIf="item.btn_icon">
-    <ion-button slot="end">
-      <ion-icon class="sf_icons" style="color: {{item.color}}" name="{{item.btn_icon}}"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-item>
+    </ion-thumbnail>
+    <ion-label>
+      <h1 *ngIf="item.h1" class="sf_section_title ion-text-left"  [ngStyle]="{color: item.h1.color}">
+        {{item.h1.value}}
+      </h1>
+      <h2 *ngIf="item.h2" class="sf_title" [ngStyle]="{color: item.h2.color}">
+        {{item.h2.value}}
+      </h2>
+      <h3 *ngIf="item.h3" class="sf_title" [ngStyle]="{color: item.h3.color}">
+        {{item.h3.value}}
+      </h3>
+      <p *ngIf="item.p" class="sf_text" [ngStyle]="{color: item.p.color}">
+        {{item.p.value}}
+      </p>
+    </ion-label>
+    <ion-buttons *ngIf="item.btn_icon">
+      <ion-button slot="end">
+        <ion-icon class="sf_icons" [ngStyle]="{color: item.color}" name="{{item.btn_icon}}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>

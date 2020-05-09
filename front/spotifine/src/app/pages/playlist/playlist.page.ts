@@ -19,11 +19,7 @@ export class PlaylistPage implements OnInit {
 
   async getPlaylist() {
     const id = this.router.url.split('/playlist/')[1];
-    try {
-      this.playlist = await this.spotifyConnectorService.getPlaylist(id);
-      this.loaded = true;
-    } catch (e) {
-      alert('error');
-    }
+    this.playlist = await this.spotifyConnectorService.getPlaylist(id);
+    this.loaded = true;
   }
 }

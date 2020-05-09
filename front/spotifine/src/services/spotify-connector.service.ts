@@ -5,8 +5,7 @@ import { AuthService } from './auth.service';
 import { Store } from '@ngrx/store';
 import { ApplicationState } from '../store/application_state/application_state.reducer';
 import { setAccount } from 'src/store/application_state/application_state.actions';
-// @ts-ignore
-import {from} from 'node-vibrant';
+import Vibrant from 'node-vibrant';
 
 
 @Injectable({
@@ -22,7 +21,7 @@ export class SpotifyConnectorService {
     }
   }
   async setTokenToSpotifyObject() {
-    await this.spotifyApi.setAccessToken(this.session.get_access_token());
+    await this.spotifyApi.setAccessToken(this.session.getAccessToken());
   }
   async getAccount(): Promise<void> {
     const account = await this.spotifyApiRequest(this.spotifyApi.getMe);
@@ -36,7 +35,7 @@ export class SpotifyConnectorService {
 
   async getUserTopArtists(limit: number, offset: number): Promise<SpotifyApi.UsersTopArtistsResponse> {
     const options = {limit, offset};
-    //spotify api limit to retrieve the first 50 artists
+    // spotify api limit to retrieve the first 50 artists
     if (offset > 50) {
       return null;
     }
@@ -49,10 +48,10 @@ export class SpotifyConnectorService {
       return options !== undefined ? await fun(options) : await fun();
     } catch (e) {
       try {
-        this.auth.refreshToken(this.session.get_refresh_token());
+        this.auth.refreshToken(this.session.getRefreshToken());
         return options !== undefined ? await fun(options) : await fun();
       } catch (e) {
-        await this.session.log_out();
+        await this.session.logOut();
         return null;
       }
     }
@@ -63,7 +62,7 @@ export class SpotifyConnectorService {
   }
 
   async getHexFromImg(image: SpotifyApi.ImageObject): Promise<string> {
-      const palette = await from(image.url).getPalette();
-      return palette.LightVibrant.getHex();
+      const palette = await Vibrant.from(image.url).getPalette();
+      return palette.Vibrant.getHex();
   }
 }

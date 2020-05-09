@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./artists.component.scss'],
 })
 export class ArtistsComponent implements OnInit {
-  @Input() artists: SpotifyApi.ArtistObjectFull[]
+  @Input() artists: SpotifyApi.ArtistObjectFull[];
   constructor() {}
 
   ngOnInit() {}

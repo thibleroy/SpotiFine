@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {SpotifyConnectorService} from "../../../services/spotify-connector.service";
-import {AccountComponent} from "../modal/account/account.component";
-import {SessionService} from "../../../services/session.service";
-import {ModalController} from "@ionic/angular";
+import {SpotifyConnectorService} from '../../../services/spotify-connector.service';
+import {AccountComponent} from '../modal/account/account.component';
+import {SessionService} from '../../../services/session.service';
+import {ModalController} from '@ionic/angular';
 import {identifiers} from '../../../html_identifiers';
 @Component({
   selector: 'sf-status',
@@ -17,12 +17,12 @@ export class StatusComponent implements OnInit {
   async ngOnInit() {
   }
 
-  getWindowWidth(): number{
+  getWindowWidth(): number {
     return window.innerWidth;
   }
 
-  async get_account(){
-    if (this.session.isAuth()){
+  async getAccount() {
+    if (this.session.isAuth()) {
         const modal = await this.modalController.create({component: AccountComponent, componentProps: {account: this.account}});
         await modal.present();
     }

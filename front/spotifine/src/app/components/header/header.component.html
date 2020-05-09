@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons [attr.data-cy]="identifiers.header_side_menu_button" *ngIf="session.isAuth()" slot="start">
-            <ion-menu-button ></ion-menu-button>
+            <ion-menu-button></ion-menu-button>
           </ion-buttons>
         <div *ngIf="session.isAuth();else disconnected" slot="end">
             <ion-buttons slot="end" *ngIf="this.isLoaded">

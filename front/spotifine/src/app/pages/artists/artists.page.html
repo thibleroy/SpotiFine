@@ -1,13 +1,12 @@
-<!-- Content -->
-<ion-card-title class="sf_general_title ion-text-left" *ngIf="artists_loaded">
+<ion-card-title class="sf_general_title ion-text-left" *ngIf="artistsLoaded">
   My top artists
 </ion-card-title>
 <ion-content>
-  <sf-artists *ngIf='artists_loaded' [artists]="artists"></sf-artists>
-  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+  <sf-artists *ngIf='artistsLoaded' [artists]="artists"></sf-artists>
+  <ion-infinite-scroll (ionInfinite)="loadData()">
     <ion-infinite-scroll-content
       loadingSpinner="bubbles"
-      loadingText="Loading more data...">
+      loadingText="Loading...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>

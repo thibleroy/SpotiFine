@@ -9,7 +9,11 @@ import {IItem} from '../../../interfaces';
 
 export class ItemComponent implements OnInit {
   @Input() item: IItem;
-  constructor() { }
 
-  ngOnInit() {}
+  constructor() {}
+
+  ngOnInit() {
+
+  }
+
 }

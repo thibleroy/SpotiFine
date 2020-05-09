@@ -6,16 +6,15 @@ import {IParam} from '../../../interfaces';
   styleUrls: ['./parameter.component.scss'],
 })
 export class ParameterComponent implements OnInit {
-  @Input() param: IParam
+  @Input() param: IParam;
   constructor() { }
 
   ngOnInit() {}
   getStr(obj: any): string {
     if (typeof(obj) === 'object') {
       return JSON.stringify(obj);
+    } else {
+      return obj;
     }
-    else return obj;
-  }
-  modify(){
   }
 }

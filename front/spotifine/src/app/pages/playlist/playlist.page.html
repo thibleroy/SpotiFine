@@ -1,13 +1,12 @@
-
-    <ion-toolbar>
-      <ion-buttons slot="start">
+<ion-toolbar>
+    <ion-buttons slot="start">
         <ion-back-button defaultHref="/playlists"></ion-back-button>
-      </ion-buttons>
-      <ion-card-title class="sf_general_title ion-text-left" *ngIf="loaded">
+    </ion-buttons>
+    <ion-card-title class="sf_general_title ion-text-left" *ngIf="loaded">
         {{playlist.name}}
-      </ion-card-title>
-    </ion-toolbar>
-    <ion-content *ngIf="loaded">
-            <sf-track *ngFor="let t of playlist.tracks.items" [track]="t.track"></sf-track>
-    </ion-content>
+    </ion-card-title>
+</ion-toolbar>
+<ion-content *ngIf="loaded">
+    <sf-track *ngFor="let t of playlist.tracks.items" [track]="t.track"></sf-track>
+</ion-content>
 

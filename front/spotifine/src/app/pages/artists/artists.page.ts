@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from "@angular/router";
-import { SessionService } from "../../../services/session.service";
-import { SpotifyConnectorService } from "../../../services/spotify-connector.service";
+import { Router } from '@angular/router';
+import { SessionService } from '../../../services/session.service';
+import { SpotifyConnectorService } from '../../../services/spotify-connector.service';
 import { IonInfiniteScroll } from '@ionic/angular';
 import ArtistObjectFull = SpotifyApi.ArtistObjectFull;
 
@@ -12,43 +12,38 @@ import ArtistObjectFull = SpotifyApi.ArtistObjectFull;
 })
 export class ArtistsPage implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
-
-  limit: number = 10;
-  offset: number = 0;
-  artists: ArtistObjectFull[] = [];
-  artists_loaded: boolean = false;
+  limit: number;
+  offset: number;
+  artists: ArtistObjectFull[];
+  artistsLoaded: boolean;
 
   constructor(private router: Router,
-    public session: SessionService,
-    private spotify: SpotifyConnectorService) {
-
-  }
+              public session: SessionService,
+              private spotify: SpotifyConnectorService) {}
 
   async ngOnInit() {
-    if (!this.session.isAuth()) {
-      await this.router.navigateByUrl('welcome');
-    }
-    else {
-      await this.getArtists();
-    }
+    this.artistsLoaded = false;
+    this.limit = 10;
+    this.offset = 0;
+    this.artists  = [];
+    await this.getArtists();
   }
 
-  async loadData($event) {
+  async loadData() {
     if (this.offset >= 50) {
-      this.infiniteScroll.disabled = true
-    }
-    else{
-    await this.getArtists();
+      this.infiniteScroll.disabled = true;
+    } else {
     this.offset += 10;
-    this.infiniteScroll.complete();
+    await this.getArtists();
+    await this.infiniteScroll.complete();
     }
   }
 
   async getArtists() {
-    const newArtists = await this.spotify.getUserTopArtists(this.limit, this.offset)
+    const newArtists = await this.spotify.getUserTopArtists(this.limit, this.offset);
     if (newArtists) {
       Array.prototype.push.apply(this.artists, newArtists.items);
-      this.artists_loaded = true;
+      this.artistsLoaded = true;
     }
   }
 }

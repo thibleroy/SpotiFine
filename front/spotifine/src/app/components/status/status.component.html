@@ -1,4 +1,4 @@
-  <ion-chip [attr.data-cy]="identifiers.me_btn" (click)="get_account()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
+  <ion-chip [attr.data-cy]="identifiers.me_btn" (click)="getAccount()" color="danger" *ngIf="getWindowWidth()>500; else mobile"  slot="start">
     <ion-avatar>
       <ion-img *ngIf="account.images.length>0 ; else no_img" [attr.data-cy]="identifiers.status_img" class="sf_avatar" src="{{account.images[0].url}}">
       </ion-img>
@@ -12,7 +12,7 @@
   </ion-chip>
   <ng-template #mobile>
     <ion-buttons>
-      <ion-button (click)="get_account()">
+      <ion-button (click)="getAccount()">
         <ion-icon name="person-outline" class="sf_icons"></ion-icon>
       </ion-button>
     </ion-buttons>
