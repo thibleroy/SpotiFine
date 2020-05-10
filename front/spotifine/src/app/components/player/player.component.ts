@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-player',
+  selector: 'sf-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss'],
 })

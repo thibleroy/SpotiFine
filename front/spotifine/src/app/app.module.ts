@@ -15,6 +15,7 @@ import { HeaderModule } from './components/header/header.module';
 
 import { StoreModule } from '@ngrx/store';
 import { applicationStateReducer } from '../store/application_state/application_state.reducer';
+import {PlayerModule} from './components/player/player.module';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { applicationStateReducer } from '../store/application_state/application_
     AppRoutingModule,
     HttpClientModule,
     FooterModule,
-    HeaderModule
+    HeaderModule,
+    PlayerModule
   ],
   providers: [
     StatusBar,
