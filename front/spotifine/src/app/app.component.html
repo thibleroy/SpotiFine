@@ -2,7 +2,7 @@
   <div *ngIf="isLoggedIn$;else isLoggedOut">
     <ion-split-pane contentId="main-content" when="lg">
       <ion-menu [attr.data-cy]="identifiers.side_menu" contentId="main-content" side="start" menuId="first">
-        <ion-header >
+        <ion-header>
           <ion-toolbar>
             <ion-title slot="start" class="sf_general_title">SPOTIFINE</ion-title>
           </ion-toolbar>
@@ -19,24 +19,29 @@
           </ion-list>
         </ion-content>
       </ion-menu>
-  
       <div class="ion-page" id="main-content">
         <sf-header></sf-header>
         <ion-content>
           <ion-router-outlet></ion-router-outlet>
+          <div *ngIf="loading" class="spinner-center">
+            <ion-spinner></ion-spinner>
+          </div>          
         </ion-content>
         <sf-footer></sf-footer>
       </div>
     </ion-split-pane>
   </div>
-  <ng-template #isLoggedOut >
-  <div class="ion-page">
-    <sf-header></sf-header>
-    <ion-content>
-      <ion-router-outlet></ion-router-outlet>
-    </ion-content>
-    <sf-footer></sf-footer>
-  </div>
+  <ng-template #isLoggedOut>
+    <div class="ion-page">
+      <sf-header></sf-header>
+      <ion-content>
+        <div *ngIf="loading" class="spinner-center">
+          <ion-spinner></ion-spinner>
+        </div>     
+        <ion-router-outlet></ion-router-outlet>
+      </ion-content>
+      <sf-footer></sf-footer>
+    </div>
   </ng-template>
-  
+
 </ion-app>

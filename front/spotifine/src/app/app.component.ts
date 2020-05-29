@@ -2,7 +2,13 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Router, RouterEvent } from '@angular/router';
+import {
+  Router, RouterEvent,
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+} from '@angular/router';
 import { routes } from './app-routing.module';
 import { CustomRoutes, CustomRoute } from 'src/lib/custom_routes';
 import { identifiers } from '../html_identifiers';
@@ -21,6 +27,7 @@ export class AppComponent {
   applicationState$: Observable<ApplicationState>;
   isLoggedIn$: boolean;
   selectedPath: string;
+  loading = false;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -39,6 +46,21 @@ export class AppComponent {
     this.router.events.subscribe((event: RouterEvent) => {
       if (event.url !== undefined) {
         this.selectedPath = event.url;
+        switch (true) {
+          case event instanceof NavigationStart: {
+            this.loading = true;
+            break;
+          }
+          case event instanceof NavigationEnd:
+          case event instanceof NavigationCancel:
+          case event instanceof NavigationError: {
+            this.loading = false;
+            break;
+          }
+          default: {
+            break;
+          }
+        }
       }
     });
 
