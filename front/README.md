@@ -1,6 +1,6 @@
 # Spotifine frontend
 
-## Used technologies
+## tools
 
 - typescript
 - ionic (v5) with angular 9
