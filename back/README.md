@@ -1,6 +1,6 @@
 # Spotifine backend
 
-## Used technologies
+## tools
 
 - typescript
 - express
