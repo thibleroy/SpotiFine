@@ -21,7 +21,7 @@
     "front:dev": "npm run print:env && npm run install:front && npm run init:front && npm run run:front"
   },
   "devDependencies": {
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "public-ip": "^4.0.1"
   },
   "dependencies": {
